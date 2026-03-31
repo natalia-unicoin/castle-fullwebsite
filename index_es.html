@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Castle | Join the Waitlist (Preview)</title>
     <link rel="icon" href="./public/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="./public/favicon.png">
+    <link rel="apple-touch-icon" href="./public/favicon.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
         @font-face {
@@ -59,42 +61,46 @@
             background: linear-gradient(90deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.95) 40%, rgba(8,8,8,0.3) 65%, rgba(8,8,8,0) 100%); z-index: 2;
         }
         .hero-content {
-            text-align: left; display: flex; flex-direction: column; align-items: flex-start; gap: 40px;
+            text-align: center; display: flex; flex-direction: column; align-items: center; gap: 35px;
             width: 100%; flex-grow: 1; justify-content: center;
         }
         .hero-title {
-            color: #FFFFFF; font-size: 100px; font-weight: 800; line-height: 1.1; letter-spacing: 1px;
+            color: #FFFFFF; font-size: 80px; font-weight: 800; line-height: 1.1; letter-spacing: 1px;
             text-shadow: 0px 10px 30px rgba(0,0,0,0.5);
         }
         .hero-title span { color: #A03FA3; /* Castle Primary Purple */ }
         .btn-large {
-            padding: 24px 60px; font-size: 20px; font-weight: 700;
+            padding: 20px 50px; font-size: 18px; font-weight: 700;
             box-shadow: 0px 15px 35px rgba(126,47,130,0.5);
         }
         .btn-large:hover { transform: translateY(-4px); box-shadow: 0px 20px 45px rgba(126,47,130,0.7); }
 
         .hero-footer {
             display: flex; flex-direction: column; gap: 8px; font-family: 'Inter', sans-serif;
-            text-align: left; margin-top: auto;
+            text-align: center; margin-top: auto;
         }
         .hero-footer p { margin: 0; }
         .hero-disclaimer { color: rgba(255,255,255,0.6); font-size: 11px; line-height: 1.5; }
         .hero-copyright { color: rgba(255,255,255,0.8); font-size: 13px; font-weight: 500; }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1280px) {
             header { padding: 20px 50px; }
             .hero { padding: 0 50px; }
-            .hero-title { font-size: 72px; }
-            .hero-gradient { background: linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,0.85) 50%, rgba(8,8,8,0.95) 100%); }
+            .hero-container { margin-left: 50px; }
+            .hero-title { font-size: 68px; }
+        }
+        @media (max-width: 1024px) {
             .hero-container { margin-left: 0; padding: 15vh 0 30px 0; }
+            .hero-title { font-size: 56px; }
         }
         @media (max-width: 768px) {
             header { padding: 16px 20px; }
             .hero { padding: 0 20px; }
-            .hero-title { font-size: 46px; }
-            .hero-container { padding: 15vh 0 20px 0; }
-            .hero-content { gap: 30px; }
-            .btn-large { width: auto; padding: 20px 32px; font-size: 16px; }
+            .hero-img { object-position: 30% center; }
+            .hero-title { font-size: 40px; }
+            .hero-container { padding: 15vh 0 20px 0; margin-left: 0; }
+            .hero-content { gap: 24px; padding-top: 10vh; }
+            .btn-large { width: auto; padding: 18px 28px; font-size: 15px; }
         }
     </style>
 </head>

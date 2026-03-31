@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castle | Join the Waitlist (Preview)</title>
+    <link rel="icon" href="./public/favicon.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        @font-face {
+            font-family: 'Cal Sans';
+            src: local('Cal Sans'), url('https://fonts.cdnfonts.com/s/72921/CalSans-SemiBold.woff') format('woff');
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Cal Sans', system-ui, sans-serif; 
+            background-color: #F8F8FA; /* Ghost White */
+            color: #1A1A1A; /* Soft Black */
+            overflow-x: hidden;
+        }
+        /* Header */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%; padding: 20px 100px;
+            display: flex; justify-content: space-between; align-items: center;
+            background: transparent;
+            z-index: 100; transition: opacity 0.3s ease;
+        }
+        header .logo { font-size: 24px; font-weight: 800; color: #FFFFFF; text-decoration: none; }
+        header .logo img { height: 35px; width: 140px; object-fit: contain; }
+        .actions { display: flex; align-items: center; gap: 24px; }
+        .lang-select { 
+            background: transparent; border: none; font-family: 'Cal Sans', sans-serif;
+            font-weight: 600; font-size: 14px; color: #FFFFFF; cursor: pointer; outline: none;
+        }
+        .lang-select option { color: #1A1A1A; }
+        .btn {
+            background-color: #A03FA3; color: white; padding: 10px 24px;
+            font-size: 14px; font-weight: 600; border-radius: 50px; text-decoration: none;
+            text-transform: uppercase; transition: background-color 0.3s;
+            display: inline-block; border: none; font-family: 'Cal Sans', sans-serif;
+            letter-spacing: 1.5px;
+        }
+        .btn:hover { background-color: #7E2F82; }
+
+        /* Hero Full Screen */
+        .hero {
+            position: relative; min-height: 100vh; display: flex; align-items: stretch; justify-content: flex-start;
+            background-color: #080808; overflow: hidden; padding: 0 100px;
+        }
+        .hero-container {
+            position: relative; z-index: 3; display: flex; flex-direction: column; justify-content: center;
+            width: 100%; max-width: 900px; margin-left: 120px; padding: 15vh 0 40px 0;
+        }
+        .hero-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; z-index: 1; opacity: 0.85;
+        }
+        .hero-gradient {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: linear-gradient(90deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.95) 40%, rgba(8,8,8,0.3) 65%, rgba(8,8,8,0) 100%); z-index: 2;
+        }
+        .hero-content {
+            text-align: left; display: flex; flex-direction: column; align-items: flex-start; gap: 40px;
+            width: 100%; flex-grow: 1; justify-content: center;
+        }
+        .hero-title {
+            color: #FFFFFF; font-size: 100px; font-weight: 800; line-height: 1.1; letter-spacing: 1px;
+            text-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+        }
+        .hero-title span { color: #A03FA3; /* Castle Primary Purple */ }
+        .btn-large {
+            padding: 24px 60px; font-size: 20px; font-weight: 700;
+            box-shadow: 0px 15px 35px rgba(126,47,130,0.5);
+        }
+        .btn-large:hover { transform: translateY(-4px); box-shadow: 0px 20px 45px rgba(126,47,130,0.7); }
+
+        .hero-footer {
+            display: flex; flex-direction: column; gap: 8px; font-family: 'Inter', sans-serif;
+            text-align: left; margin-top: auto;
+        }
+        .hero-footer p { margin: 0; }
+        .hero-disclaimer { color: rgba(255,255,255,0.6); font-size: 11px; line-height: 1.5; }
+        .hero-copyright { color: rgba(255,255,255,0.8); font-size: 13px; font-weight: 500; }
+
+        @media (max-width: 1024px) {
+            header { padding: 20px 50px; }
+            .hero { padding: 0 50px; }
+            .hero-title { font-size: 72px; }
+            .hero-gradient { background: linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,0.85) 50%, rgba(8,8,8,0.95) 100%); }
+            .hero-container { margin-left: 0; padding: 15vh 0 30px 0; }
+        }
+        @media (max-width: 768px) {
+            header { padding: 16px 20px; }
+            .hero { padding: 0 20px; }
+            .hero-title { font-size: 46px; }
+            .hero-container { padding: 15vh 0 20px 0; }
+            .hero-content { gap: 30px; }
+            .btn-large { width: auto; padding: 20px 32px; font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">
+            <img src="./public/images/_common/logo-light.png" alt="CASTLE">
+        </a>
+        <div class="actions">
+            <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="index.html" selected>ENG</option>
+                <option value="index_es.html">ESP</option>
+            </select>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="./public/images/_common/hero-bg.png" class="hero-img" alt="Background">
+        <div class="hero-gradient"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Own Your <span>Wealth</span>.<br/>Own Your <span>Future</span>.</h1>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUnfm9YraHz4X4FBUcvN_vpguLsqBqj_Bkx6rl9P36k7Cigw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-large">JOIN THE WAITLIST</a>
+            </div>
+            <div class="hero-footer">
+                <p class="hero-copyright">© 2026 Castle. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.opacity = '0';
+                header.style.pointerEvents = 'none';
+            } else {
+                header.style.opacity = '1';
+                header.style.pointerEvents = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>

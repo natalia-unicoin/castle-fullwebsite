@@ -87,12 +87,12 @@
         }
         .hero-title {
             color: #FFFFFF; font-size: clamp(64px, 8vw, 120px); font-weight: 700; line-height: 1; letter-spacing: -3px;
-            text-shadow: 0px 10px 30px rgba(0,0,0,0.5); margin-bottom: 24px;
+            text-shadow: 0px 10px 30px rgba(0,0,0,0.5); margin-bottom: 8px;
         }
         .hero-title span { color: #A03FA3; /* Castle Primary Purple */ }
         .hero-description {
             color: rgba(255,255,255,0.9); font-size: clamp(18px, 2vw, 24px); line-height: 1.5;
-            max-width: 650px; margin-bottom: 40px; font-weight: 400; font-family: 'Inter', sans-serif;
+            max-width: 650px; margin-bottom: 24px; font-weight: 400; font-family: 'Inter', sans-serif;
         }
         .hero-cta-group { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; width: 100%; }
         .hero-cta-text { color: rgba(255,255,255,0.5); font-size: 14px; font-weight: 500; letter-spacing: 0.5px; margin-left: 12px; }
@@ -137,8 +137,15 @@
         }
 
         /* 2. Statement */
-        .statement-section { text-align: center; padding: 150px 0; background-color: #FFFFFF; }
-        .statement-section h2 { font-size: clamp(40px, 6vw, 80px); font-weight: 700; letter-spacing: -2px; color: #111111; }
+        /* 2. The Reality */
+        .reality-section { background-color: #F9FAFB; padding: 160px 0; text-align: left; border-bottom: 1px solid #F3F4F6; }
+        .reality-container { max-width: 1000px; padding: 0 40px; display: flex; flex-direction: column; gap: 4px; }
+        .reality-eyebrow { color: #A03FA3; font-weight: 700; font-size: 16px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px; }
+        .reality-title { font-size: clamp(48px, 7vw, 92px); font-weight: 700; line-height: 1.05; letter-spacing: -2px; color: #111111; margin-bottom: 0px; }
+        .reality-title .highlight { color: #A03FA3; }
+        .reality-content { margin-top: 40px; max-width: 800px; display: flex; flex-direction: column; gap: 16px; font-family: 'Inter', sans-serif; }
+        .reality-content h3 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: #111111; letter-spacing: -1px; margin-bottom: 0; }
+        .reality-content p { font-size: clamp(18px, 2vw, 24px); color: #4B5563; line-height: 1.6; margin-bottom: 0; }
 
         /* 3. Bento Box */
         .bento-section { background-color: #FFFFFF; }
@@ -198,7 +205,7 @@
         .reward-card:hover .reward-arrow { background: #A03FA3; transform: scale(1.1) rotate(45deg); }
 
         .reward-content { position: relative; z-index: 3; padding: 40px 30px; }
-        .reward-card h4 { font-size: 44px; font-weight: 600; margin-bottom: 8px; color: #FFFFFF; font-family: 'Caveat', cursive; line-height: 1; transform: rotate(-2deg); transform-origin: left; display: inline-block; }
+        .reward-card h4 { font-size: 28px; font-weight: 600; margin-bottom: 12px; color: #FFFFFF; font-family: 'Poppins', sans-serif; line-height: 1.2; letter-spacing: -0.5px; }
         .reward-card p { color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 16px; margin: 0; font-family: 'Inter', sans-serif; }
 
         /* 5. Community */
@@ -287,10 +294,15 @@
         </div>
     </section>
 
-    <!-- 2. Statement Section -->
-    <section class="content-section statement-section">
-        <div class="container">
-            <h2>Women were taught to wait.</h2>
+    <!-- 2. The Reality Section -->
+    <section id="reality" class="reality-section">
+        <div class="container reality-container">
+            <p class="reality-eyebrow">THE REALITY</p>
+            <h2 class="reality-title">Women were taught to wait.<br><span class="highlight">Not to build wealth.</span></h2>
+            <div class="reality-content">
+                <h3>Castle changes that.</h3>
+                <p>We combine AI, education, and incentives to help women take ownership of their financial future.</p>
+            </div>
         </div>
     </section>
 

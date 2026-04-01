@@ -166,16 +166,49 @@
         .btn-secondary:hover { background-color: #333333; }
 
         /* Global typography helpers */
+        .section-eyebrow { color: #A03FA3; font-weight: 700; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px; text-align: center; display: block; }
         .section-title { font-size: clamp(36px, 4vw, 56px); font-weight: 700; letter-spacing: -1.5px; margin-bottom: 20px; color: #111111; text-align: center; }
         .section-subtitle { font-size: 20px; color: #4B5563; max-width: 700px; margin: 0 auto 60px auto; line-height: 1.6; text-align: center; }
 
-        /* 4. Rewards Hoverboxes */
-        .rewards-section { background-color: #F9FAFB; border-top: 1px solid #F3F4F6; border-bottom: 1px solid #F3F4F6; }
+        /* 4. Program (Genesis Challenge) */
+        .program-section { background-color: #FFFFFF; padding: 120px 0; border-bottom: 1px solid #F3F4F6; text-align: center; }
+        .program-sequence { display: flex; align-items: center; justify-content: center; gap: clamp(12px, 3vw, 32px); margin-top: 40px; margin-bottom: 40px; flex-wrap: wrap; }
+        .program-sequence span { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(24px, 4vw, 40px); color: #111111; letter-spacing: -1px; }
+        .program-sequence .seq-arrow { color: #A03FA3; font-weight: 400; font-family: 'Inter', sans-serif;}
+        
+        /* 5. Incentive Layer */
+        .incentive-section { background-color: #F9FAFB; padding: 120px 0; border-bottom: 1px solid #F3F4F6; }
+        .incentive-grid { display: grid; gap: 60px; grid-template-columns: 1fr; align-items: center; max-width: 1100px; margin: 0 auto; }
+        @media(min-width: 1024px){ .incentive-grid { grid-template-columns: 1fr 1fr; } }
+        .incentive-content { display: flex; flex-direction: column; justify-content: center; }
+        .incentive-subheadline { font-size: 24px; font-weight: 700; color: #111111; margin-bottom: 12px; }
+        .incentive-desc { font-size: 18px; color: #4B5563; line-height: 1.6; margin-bottom: 40px; font-family: 'Inter', sans-serif; }
+        .incentive-bullets { margin-bottom: 40px; }
+        .incentive-bullets p { font-size: 16px; color: #4B5563; margin-bottom: 16px; }
+        .incentive-bullets ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr; gap: 16px; margin: 0; }
+        @media(min-width: 768px){ .incentive-bullets ul { grid-template-columns: 1fr 1fr; } }
+        .incentive-bullets li { position: relative; padding-left: 20px; font-size: 15px; font-weight: 600; color: #4B5563; font-family: 'Inter', sans-serif; }
+        .incentive-bullets li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background-color: #A03FA3; }
+        .incentive-footer h3 { font-size: 22px; font-weight: 700; color: #111111; margin-bottom: 4px; }
+        .incentive-footer p { font-size: 18px; color: #4B5563; font-family: 'Inter', sans-serif; }
+        
+        .incentive-ui-wrapper { background-color: #F9EFE5; border-radius: 24px; padding: 40px clamp(20px, 4vw, 40px); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .incentive-ui { width: 100%; max-width: 450px; }
+        .ui-header { font-size: 13px; font-weight: 700; color: #A03FA3; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; font-family: 'Poppins', sans-serif; }
+        .ui-list { display: flex; flex-direction: column; gap: 12px; }
+        .ui-item { background: #FFFFFF; border-radius: 12px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: transform 0.2s ease; }
+        .ui-item:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.06); }
+        .ui-task { font-size: 14px; font-weight: 600; color: #111111; font-family: 'Inter', sans-serif; }
+        .ui-pts { font-size: 14px; font-weight: 700; color: #A03FA3; font-family: 'Poppins', sans-serif; }
+
+        /* 6. Mechanics Hoverboxes */
+        .rewards-section { background-color: #FFFFFF; border-top: 1px solid #F3F4F6; border-bottom: 1px solid #F3F4F6; padding: 120px 0; }
         .rewards-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-        @media(min-width: 768px){ .rewards-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media(min-width: 768px){ .rewards-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media(min-width: 1024px){ .rewards-grid { grid-template-columns: repeat(5, 1fr); gap: 16px; } }
         
         .reward-card { 
-            position: relative; border-radius: 24px; overflow: hidden; min-height: 550px;
+            position: relative; border-radius: 20px; overflow: hidden; min-height: 480px;
             display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: none;
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
         }
@@ -204,55 +237,71 @@
         }
         .reward-card:hover .reward-arrow { background: #A03FA3; transform: scale(1.1) rotate(45deg); }
 
-        .reward-content { position: relative; z-index: 3; padding: 40px 30px; }
-        .reward-card h4 { font-size: 28px; font-weight: 600; margin-bottom: 12px; color: #FFFFFF; font-family: 'Poppins', sans-serif; line-height: 1.2; letter-spacing: -0.5px; }
-        .reward-card p { color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 16px; margin: 0; font-family: 'Inter', sans-serif; }
+        .reward-content { position: relative; z-index: 3; padding: 30px 24px; }
+        .reward-card h4 { font-size: 24px; font-weight: 600; margin-bottom: 10px; color: #FFFFFF; font-family: 'Poppins', sans-serif; line-height: 1.2; letter-spacing: -0.5px; }
+        .reward-card p { color: rgba(255,255,255,0.9); line-height: 1.5; font-size: 15px; margin: 0; font-family: 'Inter', sans-serif; }
 
-        /* 5. Community */
-        .community-section { background-color: #FFFFFF; }
-        .two-col { display: grid; grid-template-columns: 1fr; gap: 60px; }
-        @media(min-width: 768px){ .two-col { grid-template-columns: 1fr 1fr; gap: 100px; } }
-        .two-col h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; letter-spacing: -1px; margin-bottom: 24px; line-height: 1.1; color: #111111; }
-        .two-col p { font-size: 18px; color: #4B5563; line-height: 1.6; margin-bottom: 40px; }
-        .link-list { list-style: none; }
-        .link-list li { margin-bottom: 0; }
-        .link-list a { 
-            color: #111111; text-decoration: none; font-weight: 600; font-size: 18px; 
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 24px 0; border-bottom: 1px solid #E5E7EB; transition: color 0.2s;
-        }
-        .link-list li:first-child a { border-top: 1px solid #E5E7EB; }
-        .link-list a:hover { color: #A03FA3; }
+        /* 7. Real Utility */
+        .utility-section { background-color: #F9FAFB; padding: 120px 0; border-bottom: 1px solid #F3F4F6; }
+        .utility-grid { display: grid; gap: 60px; grid-template-columns: 1fr; align-items: center; max-width: 1100px; margin: 0 auto; }
+        @media(min-width: 1024px){ .utility-grid { grid-template-columns: 1fr 1fr; gap: 100px; } }
+        .utility-content { display: flex; flex-direction: column; justify-content: center; }
+        .utility-list { display: flex; flex-direction: column; width: 100%; border-top: 1px solid #E5E7EB; margin-bottom: 40px; }
+        .utility-item { display: flex; align-items: flex-start; gap: 24px; padding: 24px 0; border-bottom: 1px solid #E5E7EB; }
+        .u-num { font-size: 13px; font-weight: 700; color: #A03FA3; font-family: 'Poppins', sans-serif; letter-spacing: 1px; padding-top: 4px; }
+        .u-text { font-size: 18px; color: #4B5563; font-family: 'Inter', sans-serif; font-weight: 500; line-height: 1.4; }
+        .utility-footer { font-size: 24px; font-weight: 700; color: #111111; letter-spacing: -0.5px; }
 
-        /* 6. Growth */
-        .growth-section { background-color: #FFFFFF; text-align: center; }
+        .utility-cards-wrapper { display: flex; flex-direction: column; gap: 16px; }
+        .utility-card { background-color: #F8F3EC; border-radius: 16px; padding: 32px; border: 1px solid rgba(160,63,163,0.08); transition: transform 0.2s ease; }
+        .utility-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .utility-card h4 { font-size: 20px; font-weight: 700; color: #111111; margin-bottom: 6px; font-family: 'Poppins', sans-serif; letter-spacing: -0.5px; }
+        .utility-card p { font-size: 15px; color: #6B7280; font-family: 'Inter', sans-serif; margin: 0; }
 
-        /* 7. Careers */
-        .careers-section { background-color: #111111; color: #FFFFFF; }
-        .careers-header { text-align: center; max-width: 800px; margin: 0 auto 60px auto; }
-        .careers-header h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 700; letter-spacing: -1.5px; margin-bottom: 24px; color: #FFFFFF; }
-        .careers-header p { font-size: 20px; color: #9CA3AF; line-height: 1.6; }
-        .jobs-list { display: flex; flex-direction: column; gap: 16px; max-width: 900px; margin: 0 auto; }
-        .job-item {
-            display: flex; align-items: center; justify-content: space-between;
-            background: #1F2937; border-radius: 16px; padding: 24px 32px;
-            color: white; text-decoration: none; transition: transform 0.2s, background 0.2s;
-        }
-        .job-item:hover { background: #374151; transform: translateY(-2px); }
-        .job-title { font-size: 20px; font-weight: 600; width: 40%; }
-        .job-meta { font-size: 16px; color: #9CA3AF; flex-grow: 1; text-align: left; }
-        .job-arrow { font-size: 24px; color: #A03FA3; }
-        @media(max-width: 768px){ 
-            .job-item { flex-direction: column; align-items: flex-start; gap: 8px; } 
-            .job-title { width: 100%; }
-            .job-meta { text-align: left; margin-top: 4px; }
-            .job-arrow { display: none; }
-        }
+        /* 8. Progression */
+        .progression-section { background-color: #FFFFFF; padding: 120px 0; border-bottom: 1px solid #F3F4F6; }
+        .progression-container { max-width: 1100px; margin: 0 auto; }
+        .progression-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 60px; }
+        @media(min-width: 768px){ .progression-grid { grid-template-columns: repeat(4, 1fr); } }
+        .prog-card { background-color: #F9FAFB; border-radius: 16px; padding: 40px 30px; border: 1px solid #E5E7EB; border-bottom: 3px solid transparent; display: flex; flex-direction: column; gap: 16px; transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; cursor: pointer; }
+        .prog-card:hover { background-color: #FFFFFF; border-color: rgba(160,63,163,0.3); border-bottom: 3px solid #A03FA3; transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.04); }
+        .prog-eyebrow { font-size: 12px; font-weight: 700; color: #A03FA3; letter-spacing: 2px; text-transform: uppercase; font-family: 'Poppins', sans-serif; }
+        .prog-card h4 { font-size: 30px; font-weight: 700; color: #111111; margin: 0; font-family: 'Poppins', sans-serif; letter-spacing: -1px; }
+        .progression-footer { font-size: 22px; color: #4B5563; font-family: 'Inter', sans-serif; line-height: 1.5; }
+        .progression-footer b { color: #111111; font-weight: 700; }
 
-        /* 8. Footer CTA */
-        .footer-cta { text-align: center; padding: 120px 0; background-color: #FFFFFF; border-top: 1px solid #E5E7EB; }
-        .cta-large { font-size: clamp(40px, 6vw, 80px); font-weight: 700; letter-spacing: -2px; margin-bottom: 40px; color: #111111; }
-        .cta-sub { font-size: 18px; color: #6B7280; margin-top: 24px; font-weight: 500; }
+        /* 9. Influence */
+        .influence-section { background-color: #F9FAFB; padding: 120px 0; border-bottom: 1px solid #F3F4F6; }
+        .influence-grid { display: grid; gap: 24px; grid-template-columns: 1fr; margin-top: 60px; }
+        @media(min-width: 768px){ .influence-grid { grid-template-columns: repeat(3, 1fr); } }
+        .influence-card { background: #FFFFFF; border-radius: 20px; padding: 40px 32px; border: 1px solid #E5E7EB; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; transition: transform 0.3s ease; }
+        .influence-card:hover { transform: translateY(-6px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); border-color: #D1D5DB; }
+        .inf-content h4 { font-size: 22px; font-weight: 700; color: #111111; margin-bottom: 16px; font-family: 'Poppins', sans-serif; letter-spacing: -0.5px; }
+        .inf-content p { font-size: 16px; color: #4B5563; line-height: 1.6; font-family: 'Inter', sans-serif; margin-bottom: 30px; }
+        .influence-card a { font-size: 13px; font-weight: 700; color: #A03FA3; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; font-family: 'Poppins', sans-serif; transition: opacity 0.2s; }
+        .influence-card a:hover { opacity: 0.7; }
+
+        /* 10. Partnerships */
+        .partnerships-section { background-color: #FFFFFF; padding: 120px 0; border-bottom: 1px solid #F3F4F6; }
+        .partnerships-grid { display: grid; gap: 24px; grid-template-columns: 1fr; margin-top: 60px; }
+        @media(min-width: 768px){ .partnerships-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media(min-width: 1024px){ .partnerships-grid { grid-template-columns: repeat(4, 1fr); } }
+
+        /* 11. The Horizon */
+        .horizon-section { background-color: #F9EFE5; padding: 140px 0; border-bottom: 1px solid #EAE0D5; }
+        .horizon-container { max-width: 800px; margin: 0 auto; text-align: left; }
+        .horizon-bold { font-size: clamp(20px, 3vw, 24px); font-weight: 700; color: #111111; margin-bottom: 30px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px; }
+        .horizon-text { font-size: clamp(18px, 2.5vw, 22px); color: #4B5563; line-height: 1.6; margin-bottom: 30px; font-family: 'Inter', sans-serif; }
+        .horizon-badge { display: inline-block; padding: 8px 24px; border-radius: 50px; border: 1px solid rgba(160,63,163,0.3); color: #A03FA3; font-size: 13px; font-weight: 700; letter-spacing: 1px; font-family: 'Poppins', sans-serif; margin-top: 20px; }
+
+        /* 12. Final CTA */
+        .final-cta-section { background-color: #A03FA3; padding: 140px 0; text-align: center; }
+        .final-cta-container { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .final-title { font-size: clamp(48px, 7vw, 92px); font-weight: 700; color: #FFFFFF; line-height: 1.1; letter-spacing: -2.5px; margin-bottom: 50px; font-family: 'Poppins', sans-serif; text-align: center; }
+        .final-title .transparent-text { color: rgba(255,255,255,0.4); display: block; }
+        .final-btn { background-color: #FFFFFF; color: #111111; padding: 18px 40px; border-radius: 50px; font-size: 16px; font-weight: 700; font-family: 'Poppins', sans-serif; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; margin-bottom: 80px; display: inline-block; letter-spacing: 0.5px; }
+        .final-btn:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+        .final-logo { margin-top: 20px; text-align: center; }
     </style>
 </head>
 <body>
@@ -327,122 +376,297 @@
         </div>
     </section>
 
-    <!-- 4. Rewards Section -->
-    <section class="content-section rewards-section">
+    <!-- 4. Program Section -->
+    <section id="program" class="program-section">
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+            <p class="section-eyebrow">THE GENESIS CHALLENGE</p>
+            <h2 class="section-title">The 6-Week Wealth Program</h2>
+            <p class="section-subtitle">A 6-week intensive sprint designed to re-program your financial habits, build your first investment portfolio alongside other driven women, and start earning rewards from Day 1.</p>
+            
+            <div class="program-sequence">
+                <span>Learn</span><span class="seq-arrow">&#8594;</span>
+                <span>Apply</span><span class="seq-arrow">&#8594;</span>
+                <span>Earn</span><span class="seq-arrow">&#8594;</span>
+                <span>Grow</span>
+            </div>
+            
+            <div style="margin-top: 40px; text-align: center;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUnfm9YraHz4X4FBUcvN_vpguLsqBqj_Bkx6rl9P36k7Cigw/viewform" target="_blank" class="btn btn-large" style="text-transform: uppercase !important;">Apply to Join</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Incentive Layer -->
+    <section id="incentives" class="incentive-section">
+        <div class="container incentive-grid">
+            <div class="incentive-content">
+                <p class="section-eyebrow" style="text-align: left;">INCENTIVE LAYER</p>
+                <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Get Rewarded for<br>Building Wealth</h2>
+                <h3 class="incentive-subheadline">We redesigned the system.</h3>
+                <p class="incentive-desc">Most platforms reward spending. We reward financial progress.</p>
+                
+                <div class="incentive-bullets">
+                    <p>Earn rewards for:</p>
+                    <ul>
+                        <li>Learning how to invest</li>
+                        <li>Building saving habits</li>
+                        <li>Making smart financial decisions</li>
+                        <li>Supporting other women</li>
+                    </ul>
+                </div>
+                <div class="incentive-footer">
+                    <h3>This is not speculation.</h3>
+                    <p>This is behavioral wealth creation.</p>
+                </div>
+            </div>
+            
+            <div class="incentive-ui-wrapper">
+                <div class="incentive-ui">
+                    <p class="ui-header">YOUR PROGRESS, REWARDED</p>
+                    <div class="ui-list">
+                        <div class="ui-item"><span class="ui-task">Completed: Intro to Investing</span><span class="ui-pts">+50 pts</span></div>
+                        <div class="ui-item"><span class="ui-task">Saved $200 this month</span><span class="ui-pts">+80 pts</span></div>
+                        <div class="ui-item"><span class="ui-task">First investment made</span><span class="ui-pts">+150 pts</span></div>
+                        <div class="ui-item"><span class="ui-task">Referred a friend</span><span class="ui-pts">+100 pts</span></div>
+                        <div class="ui-item"><span class="ui-task">30-day streak</span><span class="ui-pts">+200 pts</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Mechanics Hoverboxes -->
+    <section class="rewards-section">
         <div class="container">
-            <h2 class="section-title">Get Rewarded for Building Wealth</h2>
-            <p class="section-subtitle">We redesigned the system. Most platforms reward spending. We reward financial progress. Earn rewards for:</p>
+            <p class="section-eyebrow">THE MECHANICS</p>
+            <h2 class="section-title">How You Earn</h2>
             <div class="rewards-grid">
+                
                 <div class="reward-card">
-                    <div class="reward-bg">Photo Placeholder 1</div>
+                    <div class="reward-bg">Learn</div>
                     <div class="reward-overlay"></div>
                     <div class="reward-arrow">&#8599;</div>
                     <div class="reward-content">
-                        <h4>How You Earn</h4>
-                        <p>Building your portfolio, hitting milestones, and learning.</p>
+                        <h4>Learn</h4>
+                        <p>Complete financial modules.</p>
                     </div>
                 </div>
+
                 <div class="reward-card">
-                    <div class="reward-bg">Photo Placeholder 2</div>
+                    <div class="reward-bg">Act</div>
                     <div class="reward-overlay"></div>
                     <div class="reward-arrow">&#8599;</div>
                     <div class="reward-content">
-                        <h4>Use Your Rewards</h4>
-                        <p>Exclusive access, premium features, and real-world assets.</p>
+                        <h4>Act</h4>
+                        <p>Save, invest, optimize spending.</p>
                     </div>
                 </div>
+
                 <div class="reward-card">
-                    <div class="reward-bg">Photo Placeholder 3</div>
+                    <div class="reward-bg">Stay Consistent</div>
                     <div class="reward-overlay"></div>
                     <div class="reward-arrow">&#8599;</div>
                     <div class="reward-content">
-                        <h4>Your Wealth Identity</h4>
-                        <p>Your on-chain reputation that grows with your wealth.</p>
+                        <h4>Stay Consistent</h4>
+                        <p>Build habits and streaks.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 5. Community & Ecosystem -->
-    <section class="content-section community-section">
-        <div class="container">
-            <div class="two-col">
-                <div class="col">
-                    <h2>Together we build.<br/>Together we earn.</h2>
-                    <p>A global network of women. Whether you're building online or hosting events in your city, there is a place for you to lead.</p>
-                    <ul class="link-list">
-                        <li><a href="#">Join the Network &rarr;</a></li>
-                        <li><a href="#">Apply as Ambassador &rarr;</a></li>
-                        <li><a href="#">Start a Chapter &rarr;</a></li>
-                    </ul>
+                <div class="reward-card">
+                    <div class="reward-bg">Contribute</div>
+                    <div class="reward-overlay"></div>
+                    <div class="reward-arrow">&#8599;</div>
+                    <div class="reward-content">
+                        <h4>Contribute</h4>
+                        <p>Support other women.</p>
+                    </div>
                 </div>
-                <div class="col">
-                    <h2>Scale the Movement<br/>with Us</h2>
-                    <p>Join the ecosystem of institutions, brands, and creators dedicated to rewiring women's financial futures.</p>
-                    <ul class="link-list">
-                        <li><a href="#">Explore Education &rarr;</a></li>
-                        <li><a href="#">Explore Startups &rarr;</a></li>
-                        <li><a href="#">Explore Enterprise &rarr;</a></li>
-                        <li><a href="#">Explore Affiliates &rarr;</a></li>
-                    </ul>
+
+                <div class="reward-card">
+                    <div class="reward-bg">Network</div>
+                    <div class="reward-overlay"></div>
+                    <div class="reward-arrow">&#8599;</div>
+                    <div class="reward-content">
+                        <h4>Grow the Network</h4>
+                        <p>Invite other women.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Real Utility -->
+    <section id="utility" class="utility-section">
+        <div class="container utility-grid">
+            <div class="utility-content">
+                <p class="section-eyebrow" style="text-align: left;">REAL UTILITY</p>
+                <h2 class="section-title" style="text-align: left; margin-bottom: 40px;">Use Your Rewards</h2>
+                
+                <div class="utility-list">
+                    <div class="utility-item"><span class="u-num">01</span><span class="u-text">Unlock premium AI coaching</span></div>
+                    <div class="utility-item"><span class="u-num">02</span><span class="u-text">Access exclusive investment opportunities</span></div>
+                    <div class="utility-item"><span class="u-num">03</span><span class="u-text">Join private circles</span></div>
+                    <div class="utility-item"><span class="u-num">04</span><span class="u-text">Attend curated experiences</span></div>
+                    <div class="utility-item"><span class="u-num">05</span><span class="u-text">Get financial benefits</span></div>
+                </div>
+                
+                <h3 class="utility-footer">Your rewards unlock access.</h3>
+            </div>
+            
+            <div class="utility-cards-wrapper">
+                <div class="utility-card">
+                    <h4>AI Wealth Coach</h4>
+                    <p>Premium tier unlocked</p>
+                </div>
+                <div class="utility-card">
+                    <h4>Private Investment Circle</h4>
+                    <p>Access granted</p>
+                </div>
+                <div class="utility-card">
+                    <h4>Annual Summit</h4>
+                    <p>Invitation unlocked</p>
+                </div>
+                <div class="utility-card">
+                    <h4>Exclusive Deal Flow</h4>
+                    <p>Oracle tier & above</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. Growth & Integrations -->
-    <section class="content-section growth-section">
-        <div class="container">
-            <h2 class="section-title" style="margin-bottom: 60px;">How the System Grows</h2>
-            <div class="image-placeholder" style="height: 300px; margin-bottom: 80px;">
-                <span>Ecosystem Flow Placeholder</span>
+    <!-- 8. Progression -->
+    <section id="identity" class="progression-section">
+        <div class="container progression-container">
+            <p class="section-eyebrow" style="text-align: left;">PROGRESSION</p>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 40px;">Your Wealth Identity</h2>
+            
+            <div class="progression-grid">
+                <div class="prog-card">
+                    <span class="prog-eyebrow">LEVEL 01</span>
+                    <h4>Explorer</h4>
+                </div>
+                <div class="prog-card">
+                    <span class="prog-eyebrow">LEVEL 02</span>
+                    <h4>Builder</h4>
+                </div>
+                <div class="prog-card">
+                    <span class="prog-eyebrow">LEVEL 03</span>
+                    <h4>Investor</h4>
+                </div>
+                <div class="prog-card">
+                    <span class="prog-eyebrow">LEVEL 04</span>
+                    <h4>Oracle</h4>
+                </div>
             </div>
-            <h2 class="section-title" style="margin-bottom: 60px;">Future Integrations</h2>
-            <div class="image-placeholder" style="height: 200px;">
-                <span>Integrations Logos Placeholder</span>
+            
+            <p class="progression-footer">The more you build,<br><b>the more power you unlock.</b></p>
+        </div>
+    </section>
+
+    <!-- 9. Influence -->
+    <section id="influence" class="influence-section">
+        <div class="container" style="max-width: 1200px;">
+            <p class="section-eyebrow" style="text-align: left;">TOKENIZE YOUR INFLUENCE</p>
+            <h2 class="section-title" style="text-align: left; max-width: 800px; margin-bottom: 24px;">Together we build.<br>Together we earn.</h2>
+            <p class="section-subtitle" style="text-align: left; margin: 0; max-width: 650px;">A global network of women. Whether you're building online or hosting events in your city, there is a place for you to lead.</p>
+            
+            <div class="influence-grid">
+                <div class="influence-card">
+                    <div class="inf-content">
+                        <h4>Digital Champions</h4>
+                        <p>Connect with driven women globally, moderate discussions, and tokenize your digital influence from anywhere.</p>
+                    </div>
+                    <a href="#">JOIN THE NETWORK &rarr;</a>
+                </div>
+                
+                <div class="influence-card">
+                    <div class="inf-content">
+                        <h4>Castle Ambassadors</h4>
+                        <p>Passionate local leaders. Host meetups, lead financial workshops, and become the face of CASTLE in your city.</p>
+                    </div>
+                    <a href="#">APPLY AS AMBASSADOR &rarr;</a>
+                </div>
+                
+                <div class="influence-card">
+                    <div class="inf-content">
+                        <h4>Campus Leaders</h4>
+                        <p>Start the movement at your university. Equip the next generation of women with early financial intelligence.</p>
+                    </div>
+                    <a href="#">START A CHAPTER &rarr;</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. Careers -->
-    <section class="content-section careers-section">
-        <div class="container">
-            <div class="careers-header">
-                <h2>Build the last financial network for women.</h2>
-                <p>We are a team of founders, finance veterans, and builders obsessed with democratizing wealth. If you want to make a generational impact, you belong here.</p>
-            </div>
-            <div class="jobs-list">
-                <a href="#" class="job-item">
-                    <span class="job-title">Head of Community</span>
-                    <span class="job-meta">Miami &middot; Full-Time</span>
-                    <span class="job-arrow">&rarr;</span>
-                </a>
-                <a href="#" class="job-item">
-                    <span class="job-title">Product Designer</span>
-                    <span class="job-meta">Remote &middot; Full-Time</span>
-                    <span class="job-arrow">&rarr;</span>
-                </a>
-                <a href="#" class="job-item">
-                    <span class="job-title">Strategic Partnerships Lead</span>
-                    <span class="job-meta">New York &middot; Full-Time</span>
-                    <span class="job-arrow">&rarr;</span>
-                </a>
-                <a href="#" class="job-item">
-                    <span class="job-title">Senior Growth Engineer</span>
-                    <span class="job-meta">Remote &middot; Full-Time</span>
-                    <span class="job-arrow">&rarr;</span>
-                </a>
+    <!-- 10. Partnerships -->
+    <section id="partnerships" class="partnerships-section">
+        <div class="container" style="max-width: 1200px;">
+            <p class="section-eyebrow" style="text-align: left;">PARTNERSHIP OPPORTUNITIES</p>
+            <h2 class="section-title" style="text-align: left; max-width: 800px; margin-bottom: 24px;">Scale the Movement<br>with Us</h2>
+            <p class="section-subtitle" style="text-align: left; margin: 0; max-width: 650px;">Join the ecosystem of institutions, brands, and creators dedicated to rewiring women's financial futures.</p>
+            
+            <div class="partnerships-grid">
+                <div class="influence-card">
+                    <div class="inf-content">
+                        <h4>Universities & Education</h4>
+                        <p>Equip the next generation with real-world financial intelligence. Partner with us for campus programs and curriculum integration.</p>
+                    </div>
+                    <a href="#">EXPLORE EDUCATION &rarr;</a>
+                </div>
+                
+                <div class="influence-card">
+                    <div class="inf-content">
+                        <h4>VCs & Accelerators</h4>
+                        <p>Support female tech founders. Gain access to exclusive deal flow and elevate your portfolio companies exponentially.</p>
+                    </div>
+                    <a href="#">EXPLORE STARTUPS &rarr;</a>
+                </div>
+                
+                <div class="influence-card">
+                    <div class="inf-content">
+                        <h4>Financial Institutions</h4>
+                        <p>Drive economic transformation at scale. Build tailored financial products and sponsor our global masterclasses.</p>
+                    </div>
+                    <a href="#">EXPLORE ENTERPRISE &rarr;</a>
+                </div>
+
+                <div class="influence-card">
+                    <div class="inf-content">
+                        <h4>Creators & Affiliates</h4>
+                        <p>Earn while you share the mission. Get rewarded for every driven woman you onboard to the growing Castle platform.</p>
+                    </div>
+                    <a href="#">EXPLORE AFFILIATES &rarr;</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. Footer CTA -->
-    <section class="footer-cta">
-        <div class="container">
-            <h2 class="cta-large">The Future of Women's Wealth</h2>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUnfm9YraHz4X4FBUcvN_vpguLsqBqj_Bkx6rl9P36k7Cigw/viewform" target="_blank" class="btn btn-large">Join the Waitlist</a>
-            <p class="cta-sub">Join the Movement. Secure your spot in the Castle ecosystem.</p>
+    <!-- 11. The Horizon -->
+    <section id="horizon" class="horizon-section">
+        <div class="container horizon-container">
+            <p class="section-eyebrow" style="text-align: left;">THE HORIZON</p>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 40px;">Future Integrations</h2>
+            
+            <p class="horizon-bold">Your rewards can evolve.</p>
+            <p class="horizon-text">In future phases, they may connect with broader digital asset ecosystems.</p>
+            <p class="horizon-text">Always designed for utility, never speculation.</p>
+            
+            <div class="horizon-badge">Utility first. Always.</div>
+        </div>
+    </section>
+
+    <!-- 12. Final CTA -->
+    <section class="final-cta-section">
+        <div class="container final-cta-container">
+            <p class="section-eyebrow" style="color: rgba(255,255,255,0.7); font-weight: 700; letter-spacing: 4px; margin-bottom: 24px;">JOIN THE MOVEMENT</p>
+            <h2 class="final-title">The Future of Women's Wealth<br><span class="transparent-text">Starts Now.</span></h2>
+            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUnfm9YraHz4X4FBUcvN_vpguLsqBqj_Bkx6rl9P36k7Cigw/viewform" target="_blank" class="final-btn">Join the Waitlist</a>
+            
+            <div class="final-logo">
+                <img src="./public/images/common/logo.png" alt="Castle Logo" style="height: 60px; opacity: 0.15; filter: brightness(0);">
+            </div>
         </div>
     </section>
 

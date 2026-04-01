@@ -65,7 +65,7 @@
             width: 100%; flex-grow: 1; justify-content: center;
         }
         .hero-title {
-            color: #FFFFFF; font-size: clamp(48px, 7vw, 120px); font-weight: 800; line-height: 1.1; letter-spacing: 1px;
+            color: #FFFFFF; font-size: clamp(48px, 5.5vw, 90px); font-weight: 800; line-height: 1.1; letter-spacing: 1px;
             text-shadow: 0px 10px 30px rgba(0,0,0,0.5);
         }
         .hero-title span { color: #A03FA3; /* Castle Primary Purple */ }
@@ -111,7 +111,10 @@
     </header>
 
     <section class="hero">
-        <img src="./public/images/common/hero-bg.png" class="hero-img" alt="Background">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./public/images/common/hero-bg-mobile.jpg">
+            <img src="./public/images/common/hero-bg.png" class="hero-img" alt="Background">
+        </picture>
         <div class="hero-gradient"></div>
         <div class="hero-container">
             <div class="hero-content">

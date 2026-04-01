@@ -8,14 +8,16 @@
     <link rel="shortcut icon" href="./public/favicon.png">
     <link rel="apple-touch-icon" href="./public/favicon.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
-            font-family: 'Poppins', system-ui, sans-serif; 
+            font-family: 'Inter', system-ui, sans-serif; 
             background-color: #F8F8FA; /* Ghost White */
             color: #1A1A1A; /* Soft Black */
             overflow-x: hidden;
         }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        .accent-text { font-family: 'Caveat', cursive; font-size: 1.2rem; color: #A03FA3; transform: rotate(-2deg); display: inline-block; }
         /* Header */
         header {
             position: fixed; top: 0; left: 0; width: 100%; padding: 20px 100px;
@@ -23,11 +25,11 @@
             background: transparent;
             z-index: 100; transition: opacity 0.3s ease;
         }
-        header .logo { font-size: 24px; font-weight: 800; color: #FFFFFF; text-decoration: none; }
+        header .logo { font-size: 24px; font-weight: 700; color: #FFFFFF; text-decoration: none; }
         header .logo img { height: 35px; width: 140px; object-fit: contain; }
         .actions { display: flex; align-items: center; gap: 24px; }
         .lang-select { 
-            background: transparent; border: none; font-family: 'Poppins', sans-serif;
+            background: transparent; border: none; font-family: 'Inter', sans-serif;
             font-weight: 600; font-size: 14px; color: #FFFFFF; cursor: pointer; outline: none;
         }
         .lang-select option { color: #1A1A1A; }
@@ -61,7 +63,7 @@
             width: 100%; flex-grow: 1; justify-content: center;
         }
         .hero-title {
-            color: #FFFFFF; font-size: clamp(42px, 5vw, 84px); font-weight: 800; line-height: 1.05; letter-spacing: -3px;
+            color: #FFFFFF; font-size: clamp(42px, 5vw, 84px); font-weight: 700; line-height: 1.05; letter-spacing: -3px;
             text-shadow: 0px 10px 30px rgba(0,0,0,0.5);
         }
         .hero-title span { color: #A03FA3; /* Castle Primary Purple */ }
@@ -106,7 +108,7 @@
 
         /* 2. Statement */
         .statement-section { text-align: center; padding: 150px 0; background-color: #FFFFFF; }
-        .statement-section h2 { font-size: clamp(40px, 6vw, 80px); font-weight: 800; letter-spacing: -2px; color: #111111; }
+        .statement-section h2 { font-size: clamp(40px, 6vw, 80px); font-weight: 700; letter-spacing: -2px; color: #111111; }
 
         /* 3. Bento Box */
         .bento-section { background-color: #FFFFFF; }
@@ -128,7 +130,7 @@
 
         /* 4. Rewards */
         .rewards-section { background-color: #F9FAFB; border-top: 1px solid #F3F4F6; border-bottom: 1px solid #F3F4F6; }
-        .section-title { font-size: clamp(36px, 4vw, 56px); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 20px; color: #111111; }
+        .section-title { font-size: clamp(36px, 4vw, 56px); font-weight: 700; letter-spacing: -1.5px; margin-bottom: 20px; color: #111111; }
         .section-subtitle { font-size: 20px; color: #4B5563; max-width: 700px; margin-bottom: 60px; line-height: 1.6; }
         .rewards-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
         @media(min-width: 768px){ .rewards-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -140,7 +142,7 @@
         .community-section { background-color: #FFFFFF; }
         .two-col { display: grid; grid-template-columns: 1fr; gap: 60px; }
         @media(min-width: 768px){ .two-col { grid-template-columns: 1fr 1fr; gap: 100px; } }
-        .two-col h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 800; letter-spacing: -1px; margin-bottom: 24px; line-height: 1.1; color: #111111; }
+        .two-col h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; letter-spacing: -1px; margin-bottom: 24px; line-height: 1.1; color: #111111; }
         .two-col p { font-size: 18px; color: #4B5563; line-height: 1.6; margin-bottom: 40px; }
         .link-list { list-style: none; }
         .link-list li { margin-bottom: 0; }
@@ -158,7 +160,7 @@
         /* 7. Careers */
         .careers-section { background-color: #111111; color: #FFFFFF; }
         .careers-header { text-align: center; max-width: 800px; margin: 0 auto 60px auto; }
-        .careers-header h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 24px; color: #FFFFFF; }
+        .careers-header h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 700; letter-spacing: -1.5px; margin-bottom: 24px; color: #FFFFFF; }
         .careers-header p { font-size: 20px; color: #9CA3AF; line-height: 1.6; }
         .jobs-list { display: flex; flex-direction: column; gap: 16px; max-width: 900px; margin: 0 auto; }
         .job-item {
@@ -179,7 +181,7 @@
 
         /* 8. Footer CTA */
         .footer-cta { text-align: center; padding: 120px 0; background-color: #FFFFFF; border-top: 1px solid #E5E7EB; }
-        .cta-large { font-size: clamp(40px, 6vw, 80px); font-weight: 800; letter-spacing: -2px; margin-bottom: 40px; color: #111111; }
+        .cta-large { font-size: clamp(40px, 6vw, 80px); font-weight: 700; letter-spacing: -2px; margin-bottom: 40px; color: #111111; }
         .cta-sub { font-size: 18px; color: #6B7280; margin-top: 24px; font-weight: 500; }
     </style>
 </head>

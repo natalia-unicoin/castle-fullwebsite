@@ -92,6 +92,95 @@
             .hero-gradient { background: linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,0) 35%, rgba(8,8,8,0.9) 70%, rgba(8,8,8,1) 100%); }
             .hero-footer { text-align: center; width: 100%; padding-top: 20px; }
         }
+
+        /* Full Site Layout Styles */
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 60px); }
+        .content-section { padding: 100px 0; }
+        
+        .image-placeholder {
+            background-color: #E5E7EB; border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            color: #9CA3AF; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+            width: 100%;
+        }
+
+        /* 2. Statement */
+        .statement-section { text-align: center; padding: 150px 0; background-color: #FFFFFF; }
+        .statement-section h2 { font-size: clamp(40px, 6vw, 80px); font-weight: 800; letter-spacing: -2px; color: #111111; }
+
+        /* 3. Bento Box */
+        .bento-section { background-color: #FFFFFF; }
+        .bento-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media(min-width: 768px){ .bento-grid { grid-template-columns: 1fr 1fr; } }
+        .bento-card { 
+            background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 24px; 
+            padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            display: flex; flex-direction: column; align-items: flex-start;
+        }
+        .bento-card h3 { font-size: clamp(28px, 3vw, 40px); font-weight: 700; margin-bottom: 20px; letter-spacing: -1px; color: #111111; }
+        .bento-card p { font-size: 18px; color: #4B5563; line-height: 1.6; margin-bottom: 30px; flex-grow: 1; }
+        .btn-secondary {
+            background-color: #111111; color: white; padding: 15px 32px; border-radius: 50px;
+            text-decoration: none; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
+            transition: background-color 0.3s;
+        }
+        .btn-secondary:hover { background-color: #333333; }
+
+        /* 4. Rewards */
+        .rewards-section { background-color: #F9FAFB; border-top: 1px solid #F3F4F6; border-bottom: 1px solid #F3F4F6; }
+        .section-title { font-size: clamp(36px, 4vw, 56px); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 20px; color: #111111; }
+        .section-subtitle { font-size: 20px; color: #4B5563; max-width: 700px; margin-bottom: 60px; line-height: 1.6; }
+        .rewards-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media(min-width: 768px){ .rewards-grid { grid-template-columns: repeat(3, 1fr); } }
+        .reward-card { background: #FFFFFF; border-radius: 20px; padding: 30px; border: 1px solid #E5E7EB; }
+        .reward-card h4 { font-size: 24px; font-weight: 700; margin-bottom: 12px; color: #111111; letter-spacing: -0.5px; }
+        .reward-card p { color: #6B7280; line-height: 1.5; font-size: 16px; }
+
+        /* 5. Community */
+        .community-section { background-color: #FFFFFF; }
+        .two-col { display: grid; grid-template-columns: 1fr; gap: 60px; }
+        @media(min-width: 768px){ .two-col { grid-template-columns: 1fr 1fr; gap: 100px; } }
+        .two-col h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 800; letter-spacing: -1px; margin-bottom: 24px; line-height: 1.1; color: #111111; }
+        .two-col p { font-size: 18px; color: #4B5563; line-height: 1.6; margin-bottom: 40px; }
+        .link-list { list-style: none; }
+        .link-list li { margin-bottom: 0; }
+        .link-list a { 
+            color: #111111; text-decoration: none; font-weight: 600; font-size: 18px; 
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 24px 0; border-bottom: 1px solid #E5E7EB; transition: color 0.2s;
+        }
+        .link-list li:first-child a { border-top: 1px solid #E5E7EB; }
+        .link-list a:hover { color: #A03FA3; }
+
+        /* 6. Growth */
+        .growth-section { background-color: #FFFFFF; text-align: center; }
+
+        /* 7. Careers */
+        .careers-section { background-color: #111111; color: #FFFFFF; }
+        .careers-header { text-align: center; max-width: 800px; margin: 0 auto 60px auto; }
+        .careers-header h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 24px; color: #FFFFFF; }
+        .careers-header p { font-size: 20px; color: #9CA3AF; line-height: 1.6; }
+        .jobs-list { display: flex; flex-direction: column; gap: 16px; max-width: 900px; margin: 0 auto; }
+        .job-item {
+            display: flex; align-items: center; justify-content: space-between;
+            background: #1F2937; border-radius: 16px; padding: 24px 32px;
+            color: white; text-decoration: none; transition: transform 0.2s, background 0.2s;
+        }
+        .job-item:hover { background: #374151; transform: translateY(-2px); }
+        .job-title { font-size: 20px; font-weight: 600; width: 40%; }
+        .job-meta { font-size: 16px; color: #9CA3AF; flex-grow: 1; text-align: left; }
+        .job-arrow { font-size: 24px; color: #A03FA3; }
+        @media(max-width: 768px){ 
+            .job-item { flex-direction: column; align-items: flex-start; gap: 8px; } 
+            .job-title { width: 100%; }
+            .job-meta { text-align: left; margin-top: 4px; }
+            .job-arrow { display: none; }
+        }
+
+        /* 8. Footer CTA */
+        .footer-cta { text-align: center; padding: 120px 0; background-color: #FFFFFF; border-top: 1px solid #E5E7EB; }
+        .cta-large { font-size: clamp(40px, 6vw, 80px); font-weight: 800; letter-spacing: -2px; margin-bottom: 40px; color: #111111; }
+        .cta-sub { font-size: 18px; color: #6B7280; margin-top: 24px; font-weight: 500; }
     </style>
 </head>
 <body>
@@ -121,6 +210,139 @@
             <div class="hero-footer">
                 <p class="hero-copyright">© 2026 Castle. Todos los derechos reservados.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- 2. Statement Section -->
+    <section class="content-section statement-section">
+        <div class="container">
+            <h2>Women were taught to wait.</h2>
+        </div>
+    </section>
+
+    <!-- 3. Platform & Program -->
+    <section class="content-section bento-section">
+        <div class="container">
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <h3>The Castle Platform</h3>
+                    <p>A system designed not just to manage money…but to build it.</p>
+                </div>
+                <div class="bento-card">
+                    <h3>The 6-Week Wealth Program</h3>
+                    <p>A 6-week intensive sprint designed to re-program your financial habits, build your first investment portfolio alongside other driven women, and start earning rewards from Day 1.</p>
+                    <a href="#" class="btn-secondary">Apply to Join</a>
+                </div>
+            </div>
+            <!-- Image Placeholder -->
+            <div class="image-placeholder" style="height: 400px; margin-top: 40px;">
+                <span>App UI Placeholder</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Rewards Section -->
+    <section class="content-section rewards-section">
+        <div class="container">
+            <h2 class="section-title">Get Rewarded for Building Wealth</h2>
+            <p class="section-subtitle">We redesigned the system. Most platforms reward spending. We reward financial progress. Earn rewards for:</p>
+            <div class="rewards-grid">
+                <div class="reward-card">
+                    <h4>How You Earn</h4>
+                    <p>Building your portfolio, hitting milestones, and learning.</p>
+                </div>
+                <div class="reward-card">
+                    <h4>Use Your Rewards</h4>
+                    <p>Exclusive access, premium features, and real-world assets.</p>
+                </div>
+                <div class="reward-card">
+                    <h4>Your Wealth Identity</h4>
+                    <p>Your on-chain reputation that grows with your wealth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Community & Ecosystem -->
+    <section class="content-section community-section">
+        <div class="container">
+            <div class="two-col">
+                <div class="col">
+                    <h2>Together we build.<br/>Together we earn.</h2>
+                    <p>A global network of women. Whether you're building online or hosting events in your city, there is a place for you to lead.</p>
+                    <ul class="link-list">
+                        <li><a href="#">Join the Network &rarr;</a></li>
+                        <li><a href="#">Apply as Ambassador &rarr;</a></li>
+                        <li><a href="#">Start a Chapter &rarr;</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Scale the Movement<br/>with Us</h2>
+                    <p>Join the ecosystem of institutions, brands, and creators dedicated to rewiring women's financial futures.</p>
+                    <ul class="link-list">
+                        <li><a href="#">Explore Education &rarr;</a></li>
+                        <li><a href="#">Explore Startups &rarr;</a></li>
+                        <li><a href="#">Explore Enterprise &rarr;</a></li>
+                        <li><a href="#">Explore Affiliates &rarr;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Growth & Integrations -->
+    <section class="content-section growth-section">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 60px;">How the System Grows</h2>
+            <div class="image-placeholder" style="height: 300px; margin-bottom: 80px;">
+                <span>Ecosystem Flow Placeholder</span>
+            </div>
+            <h2 class="section-title" style="margin-bottom: 60px;">Future Integrations</h2>
+            <div class="image-placeholder" style="height: 200px;">
+                <span>Integrations Logos Placeholder</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Careers -->
+    <section class="content-section careers-section">
+        <div class="container">
+            <div class="careers-header">
+                <h2>Build the last financial network for women.</h2>
+                <p>We are a team of founders, finance veterans, and builders obsessed with democratizing wealth. If you want to make a generational impact, you belong here.</p>
+            </div>
+            <div class="jobs-list">
+                <a href="#" class="job-item">
+                    <span class="job-title">Head of Community</span>
+                    <span class="job-meta">Miami &middot; Full-Time</span>
+                    <span class="job-arrow">&rarr;</span>
+                </a>
+                <a href="#" class="job-item">
+                    <span class="job-title">Product Designer</span>
+                    <span class="job-meta">Remote &middot; Full-Time</span>
+                    <span class="job-arrow">&rarr;</span>
+                </a>
+                <a href="#" class="job-item">
+                    <span class="job-title">Strategic Partnerships Lead</span>
+                    <span class="job-meta">New York &middot; Full-Time</span>
+                    <span class="job-arrow">&rarr;</span>
+                </a>
+                <a href="#" class="job-item">
+                    <span class="job-title">Senior Growth Engineer</span>
+                    <span class="job-meta">Remote &middot; Full-Time</span>
+                    <span class="job-arrow">&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Footer CTA -->
+    <section class="footer-cta">
+        <div class="container">
+            <h2 class="cta-large">The Future of Women's Wealth</h2>
+            <!-- NOTA: Textos en español de todas las secciones nuevas pendientes -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUnfm9YraHz4X4FBUcvN_vpguLsqBqj_Bkx6rl9P36k7Cigw/viewform" target="_blank" class="btn btn-large">UNITE A LA ESPERA</a>
+            <p class="cta-sub">Join the Movement. Secure your spot in the Castle ecosystem.</p>
         </div>
     </section>
 

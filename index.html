@@ -145,16 +145,13 @@
             width: 100%;
         }
 
-        /* 2. Statement */
         /* 2. The Reality */
-        .reality-section { background-color: #F9FAFB; padding: 80px 0; text-align: left; border-bottom: 1px solid #F3F4F6; }
-        .reality-container { max-width: 1000px; padding: 0 40px; display: flex; flex-direction: column; gap: 4px; }
-        .reality-eyebrow { color: #A03FA3; font-weight: 700; font-size: 16px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px; }
-        .reality-title { font-size: clamp(48px, 7vw, 92px); font-weight: 700; line-height: 1.05; letter-spacing: -2px; color: #111111; margin-bottom: 0px; }
-        .reality-title .highlight { color: #A03FA3; }
-        .reality-content { margin-top: 40px; max-width: 800px; display: flex; flex-direction: column; gap: 16px; font-family: 'Inter', sans-serif; }
-        .reality-content h3 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: #111111; letter-spacing: -1px; margin-bottom: 0; }
-        .reality-content p { font-size: clamp(18px, 2vw, 24px); color: #1A1A1A; line-height: 1.6; margin-bottom: 0; }
+        .reality-section { background-color: #F9FAFB; padding: 80px 0; text-align: center; border-bottom: 1px solid #F3F4F6; }
+        .manifesto-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; width: 100%; margin-top: 60px; text-align: left; }
+        .manifesto-card { position: relative; aspect-ratio: 3/4; border-radius: 20px; overflow: hidden; display: flex; align-items: flex-end; transition: transform 0.3s; }
+        .manifesto-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+        @media (max-width: 1024px) { .manifesto-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+        @media (max-width: 768px) { .manifesto-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 20px; gap: 20px; } .manifesto-card { flex: 0 0 75%; scroll-snap-align: center; } }
 
         /* 3. Bento Box */
         .bento-section { background-color: #FFFFFF; }
@@ -375,14 +372,67 @@
         </div>
     </section>
 
-    <!-- 2. What is Castle -->
+    <!-- 2. Our Manifesto -->
     <section id="reality" class="reality-section">
-        <div class="container reality-container" style="text-align: center;">
-            <p class="section-eyebrow">WHAT IS CASTLE</p>
-            <h2 class="section-title">The Operating System for<br><span class="highlight">Women's Wealth</span></h2>
-            <div class="reality-content" style="max-width: 800px; margin: 0 auto; margin-top: 40px; text-align: center;">
-                <p style="font-size: clamp(18px, 2vw, 22px); color: #4B5563; line-height: 1.6; font-family: 'Inter', sans-serif; margin-bottom: 24px;">Castle is an aspirational ecosystem combining intelligent tools and a powerful community to help driven women build absolute financial independence.</p>
-                <a href="#" class="btn btn-large" style="text-transform: uppercase !important; align-self: center;">See Our Manifesto</a>
+        <div class="container" style="width: 100%; max-width: 1200px;">
+            <h2 class="section-title">Our Manifesto</h2>
+            
+            <div class="manifesto-grid">
+                <!-- Block 1 -->
+                <div class="manifesto-card">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+                        <img src="./public/images/common/step1.png?v=3" alt="Cohort Learning" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(17,17,17,0.85) 100%);"></div>
+                    </div>
+                    <div style="position: relative; z-index: 2; text-align: left; width: 100%; padding: 30px;">
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 700; color: #E5E7EB; display: block; margin-bottom: 8px;">01</span>
+                        <h3 style="font-family: 'Caveat', cursive; font-size: 32px; color: #FFFFFF; font-weight: 600; line-height: 1.1; margin: 0;">Cohort Learning</h3>
+                    </div>
+                </div>
+                <!-- Block 2 -->
+                <div class="manifesto-card">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+                        <img src="./public/images/common/step2.png" alt="Account Aggregation" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(17,17,17,0.85) 100%);"></div>
+                    </div>
+                    <div style="position: relative; z-index: 2; text-align: left; width: 100%; padding: 30px;">
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 700; color: #E5E7EB; display: block; margin-bottom: 8px;">02</span>
+                        <h3 style="font-family: 'Caveat', cursive; font-size: 32px; color: #FFFFFF; font-weight: 600; line-height: 1.1; margin: 0;">Account Aggregation</h3>
+                    </div>
+                </div>
+                <!-- Block 3 -->
+                <div class="manifesto-card">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+                        <img src="./public/images/common/step3.png" alt="AI Money & Wealth Coach" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(17,17,17,0.85) 100%);"></div>
+                    </div>
+                    <div style="position: relative; z-index: 2; text-align: left; width: 100%; padding: 30px;">
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 700; color: #E5E7EB; display: block; margin-bottom: 8px;">03</span>
+                        <h3 style="font-family: 'Caveat', cursive; font-size: 32px; color: #FFFFFF; font-weight: 600; line-height: 1.1; margin: 0;">AI Money & Wealth Coach</h3>
+                    </div>
+                </div>
+                <!-- Block 4 -->
+                <div class="manifesto-card">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+                        <img src="./public/images/common/step1.png?v=3" alt="Investment Marketplace" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(17,17,17,0.85) 100%);"></div>
+                    </div>
+                    <div style="position: relative; z-index: 2; text-align: left; width: 100%; padding: 30px;">
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 700; color: #E5E7EB; display: block; margin-bottom: 8px;">04</span>
+                        <h3 style="font-family: 'Caveat', cursive; font-size: 32px; color: #FFFFFF; font-weight: 600; line-height: 1.1; margin: 0;">Investment Marketplace</h3>
+                    </div>
+                </div>
+                <!-- Block 5 -->
+                <div class="manifesto-card">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+                        <img src="./public/images/common/step2.png" alt="Social Wealth Building" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(17,17,17,0.85) 100%);"></div>
+                    </div>
+                    <div style="position: relative; z-index: 2; text-align: left; width: 100%; padding: 30px;">
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 700; color: #E5E7EB; display: block; margin-bottom: 8px;">05</span>
+                        <h3 style="font-family: 'Caveat', cursive; font-size: 32px; color: #FFFFFF; font-weight: 600; line-height: 1.1; margin: 0;">Social Wealth Building</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

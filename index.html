@@ -146,12 +146,12 @@
         }
 
         /* 2. The Reality */
-        .reality-section { background-color: #F9FAFB; padding: 80px 0; text-align: center; border-bottom: 1px solid #F3F4F6; }
-        .manifesto-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; width: 100%; margin-top: 60px; text-align: left; }
-        .manifesto-card { position: relative; aspect-ratio: 3/4; border-radius: 20px; overflow: hidden; display: flex; align-items: flex-end; transition: transform 0.3s; }
-        .manifesto-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
-        @media (max-width: 1024px) { .manifesto-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
-        @media (max-width: 768px) { .manifesto-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 20px; gap: 20px; } .manifesto-card { flex: 0 0 75%; scroll-snap-align: center; } }
+        .reality-section { background-color: #F9FAFB; padding: 100px 0; text-align: center; border-bottom: 1px solid #F3F4F6; }
+        .manifesto-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; width: 100%; margin-top: 60px; text-align: left; }
+        .manifesto-card { position: relative; aspect-ratio: 2/3; border-radius: 32px; overflow: hidden; display: flex; align-items: flex-end; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .manifesto-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(0,0,0,0.12); }
+        @media (max-width: 1024px) { .manifesto-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+        @media (max-width: 768px) { .manifesto-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 30px; gap: 20px; } .manifesto-card { flex: 0 0 80%; scroll-snap-align: center; } }
 
         /* 3. Bento Box */
         .bento-section { background-color: #FFFFFF; }
@@ -374,7 +374,7 @@
 
     <!-- 2. Our Manifesto -->
     <section id="reality" class="reality-section">
-        <div class="container" style="width: 100%; max-width: 1200px;">
+        <div class="container" style="width: 100%; max-width: 1600px; padding: 0 4vw;">
             <h2 class="section-title">Our Manifesto</h2>
             
             <div class="manifesto-grid">
@@ -440,7 +440,7 @@
     <!-- Community Banner -->
     <section class="community-banner" style="position: relative; padding: 140px 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; text-align: center; color: white;">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
-            <img src="./public/images/common/step1.png" alt="Community" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
+            <img src="./public/images/common/community-bg.jpg" alt="Community" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(17,17,17,0.85) 100%);"></div>
         </div>
         <div class="container" style="position: relative; z-index: 2; max-width: 900px;">

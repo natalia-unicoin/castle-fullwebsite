@@ -327,16 +327,16 @@
         .blog-read { font-size: 14px; font-weight: 600; color: #111111; text-decoration: none; display: flex; align-items: center; gap: 4px; text-transform: uppercase; letter-spacing: 1px; font-family: 'Inter', sans-serif; }
         
         /* Subscribe Area */
-        .subscribe-box { background: #111111; border-radius: 20px; padding: 60px 40px; margin-top: 80px; display: flex; flex-direction: column; align-items: center; color: white; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .subscribe-box h3 { font-size: clamp(28px, 4vw, 36px); font-weight: 700; margin-bottom: 16px; color: white; letter-spacing: -1px; font-family: 'Inter', sans-serif; }
-        .subscribe-box p { font-size: 16px; color: rgba(255,255,255,0.7); max-width: 500px; margin-bottom: 30px; font-family: 'Inter', sans-serif; line-height: 1.5; }
+        .subscribe-box { background: #F9FAFB; border-radius: 20px; padding: 60px 40px; margin-top: 80px; display: flex; flex-direction: column; align-items: center; color: #111111; text-align: center; border: 1px solid #E5E7EB; }
+        .subscribe-box h3 { font-size: clamp(28px, 4vw, 36px); font-weight: 700; margin-bottom: 16px; color: #111111; letter-spacing: -1px; font-family: 'Inter', sans-serif; }
+        .subscribe-box p { font-size: 16px; color: #4B5563; max-width: 500px; margin-bottom: 30px; font-family: 'Inter', sans-serif; line-height: 1.5; }
         .subscribe-form { display: flex; gap: 12px; width: 100%; max-width: 480px; margin: 0 auto; }
         @media(max-width: 600px) { .subscribe-form { flex-direction: column; } }
-        .subscribe-input { flex: 1; padding: 16px 24px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
-        .subscribe-input:focus { border-color: #A03FA3; }
-        .subscribe-input::placeholder { color: rgba(255,255,255,0.5); }
-        .subscribe-btn { padding: 16px 32px; border-radius: 50px; background: #FFFFFF; color: #111111; font-weight: 700; font-family: 'Inter', sans-serif; font-size: 15px; border: none; cursor: pointer; transition: background 0.2s, transform 0.2s; text-transform: uppercase; letter-spacing: 1px; }
-        .subscribe-btn:hover { background: #F3F4F6; transform: translateY(-2px); }
+        .subscribe-input { flex: 1; padding: 16px 24px; border-radius: 50px; border: 1px solid #D1D5DB; background: #FFFFFF; color: #111111; font-size: 16px; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+        .subscribe-input:focus { border-color: #A03FA3; box-shadow: 0 0 0 3px rgba(160,63,163,0.1); }
+        .subscribe-input::placeholder { color: #9CA3AF; }
+        .subscribe-btn { padding: 16px 32px; border-radius: 50px; background: #111111; color: #FFFFFF; font-weight: 700; font-family: 'Inter', sans-serif; font-size: 15px; border: none; cursor: pointer; transition: background 0.2s, transform 0.2s; text-transform: uppercase; letter-spacing: 1px; }
+        .subscribe-btn:hover { background: #374151; transform: translateY(-2px); }
 
         /* 12. Final CTA */
         .final-cta-section { background-color: #A03FA3; padding: 80px 0; text-align: center; }

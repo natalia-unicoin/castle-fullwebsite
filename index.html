@@ -161,7 +161,7 @@
         /* 2. The Reality */
         .reality-section { background-color: #F9FAFB; padding: 100px 0; text-align: center; border-bottom: 1px solid #F3F4F6; }
         .manifesto-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; width: 100%; margin-top: 60px; text-align: left; }
-        .manifesto-card { position: relative; aspect-ratio: 9/16; border-radius: 32px; overflow: hidden; display: flex; align-items: flex-end; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .manifesto-card { position: relative; aspect-ratio: 9/16; border-radius: 10px; overflow: hidden; display: flex; align-items: flex-end; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .manifesto-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(0,0,0,0.12); }
         @media (max-width: 1024px) { .manifesto-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
         @media (max-width: 768px) { .manifesto-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 30px; gap: 20px; } .manifesto-card { flex: 0 0 80%; scroll-snap-align: center; } }
@@ -321,7 +321,7 @@
         .final-btn { background-color: #FFFFFF; color: #A03FA3; padding: clamp(16px, 2vw, 20px) clamp(30px, 4vw, 40px); border-radius: 50px; font-size: clamp(14px, 1.5vw, 16px); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-family: 'DM Sans', sans-serif; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; margin-bottom: 60px; display: inline-block; box-shadow: 0 15px 35px rgba(0,0,0,0.2); border: none; }
         .final-btn:hover { transform: translateY(-4px); box-shadow: 0 20px 45px rgba(0,0,0,0.3); }
         .final-watermark { font-family: 'Caveat', cursive; font-size: clamp(80px, 12vw, 160px); color: #111111; opacity: 0.15; font-weight: 700; margin: 0; line-height: 0.8; }
-        .process-card { background: linear-gradient(180deg, #FFFFFF 0%, #F3F4F6 100%); border-radius: 24px; padding: 40px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; min-height: 500px; text-align: left; transition: transform 0.3s, box-shadow 0.3s; }
+        .process-card { background: linear-gradient(180deg, #FFFFFF 0%, #F3F4F6 100%); border-radius: 10px; padding: 40px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; min-height: 500px; text-align: left; transition: transform 0.3s, box-shadow 0.3s; }
         .process-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
 
         /* Footer */
@@ -470,7 +470,7 @@
 
     <!-- Community Banner -->
     <section class="community-banner" style="position: relative; padding: 140px 0 80px 0; min-height: 100vh; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; text-align: center; color: white;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; border-radius: 10px; overflow: hidden; margin-top: 60px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
             <img src="./public/images/common/community-bg.jpg?v=2" alt="Community" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(17,17,17,0.85) 100%);"></div>
         </div>
@@ -561,7 +561,7 @@
 
             <div class="partners-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px;">
                 <!-- Card 1 -->
-                <div class="partner-card" style="background-color: #F9FAFB; border-radius: 16px; overflow: hidden; padding-bottom: 30px; display: flex; flex-direction: column;">
+                <div class="partner-card" style="background-color: #F9FAFB; border-radius: 10px; overflow: hidden; padding-bottom: 30px; display: flex; flex-direction: column;">
                     <img src="./public/images/common/partner1.jpg" alt="Women Organizations" style="width: 100%; height: 240px; object-fit: cover;">
                     <div style="padding: 30px 30px 0 30px; flex: 1; display: flex; flex-direction: column;">
                         <h3 style="font-size: 24px; font-weight: 600; color: #111111; margin-bottom: 12px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px;">Women Organizations</h3>
@@ -570,7 +570,7 @@
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="partner-card" style="background-color: #F9FAFB; border-radius: 16px; overflow: hidden; padding-bottom: 30px; display: flex; flex-direction: column;">
+                <div class="partner-card" style="background-color: #F9FAFB; border-radius: 10px; overflow: hidden; padding-bottom: 30px; display: flex; flex-direction: column;">
                     <img src="./public/images/common/partner2.jpg" alt="Content Creators" style="width: 100%; height: 240px; object-fit: cover;">
                     <div style="padding: 30px 30px 0 30px; flex: 1; display: flex; flex-direction: column;">
                         <h3 style="font-size: 24px; font-weight: 600; color: #111111; margin-bottom: 12px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px;">Content Creators</h3>
@@ -579,7 +579,7 @@
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="partner-card" style="background-color: #F9FAFB; border-radius: 16px; overflow: hidden; padding-bottom: 30px; display: flex; flex-direction: column;">
+                <div class="partner-card" style="background-color: #F9FAFB; border-radius: 10px; overflow: hidden; padding-bottom: 30px; display: flex; flex-direction: column;">
                     <img src="./public/images/common/partner3.jpg" alt="Women Leaders" style="width: 100%; height: 240px; object-fit: cover;">
                     <div style="padding: 30px 30px 0 30px; flex: 1; display: flex; flex-direction: column;">
                         <h3 style="font-size: 24px; font-weight: 600; color: #111111; margin-bottom: 12px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px;">Women Leaders</h3>
@@ -588,7 +588,7 @@
                     </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="partner-card" style="background-color: #F9FAFB; border-radius: 16px; overflow: hidden; padding-bottom: 30px; display: flex; flex-direction: column;">
+                <div class="partner-card" style="background-color: #F9FAFB; border-radius: 10px; overflow: hidden; padding-bottom: 30px; display: flex; flex-direction: column;">
                     <img src="./public/images/common/partner4.jpg" alt="The Web3 Model" style="width: 100%; height: 240px; object-fit: cover;">
                     <div style="padding: 30px 30px 0 30px; flex: 1; display: flex; flex-direction: column;">
                         <h3 style="font-size: 24px; font-weight: 600; color: #111111; margin-bottom: 12px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px;">The Web3 Model</h3>

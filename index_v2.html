@@ -310,16 +310,19 @@
 
         /* 11. Blog & Subscribe */
         .blog-section { background-color: #FFFFFF; padding: 60px 0; border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; text-align: center; }
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; text-align: left; align-items: start; }
+                .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; text-align: left; align-items: stretch; }
         @media(max-width: 900px) { .blog-grid { display: flex; flex-direction: column; } }
-        .blog-card { background: #FFFFFF; border-radius: 4px; overflow: hidden; border: 1px solid #E5E7EB; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+        .blog-card { background: #FFFFFF; border-radius: 4px; overflow: hidden; border: 1px solid #E5E7EB; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; height: 100%; text-decoration: none !important; }
         .blog-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.06); }
-        .blog-img { width: 100%; height: auto; object-fit: cover; background-color: #FFFFFF; display: block; }
-        .blog-content { padding: 30px; display: flex; flex-direction: column; flex: 1; }
-        .blog-tag { font-size: 13px; font-weight: 700; color: #A03FA3; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-family: 'Inter', sans-serif; }
-        .blog-title { font-size: 22px; font-weight: 700; color: #111111; margin-bottom: 12px; line-height: 1.3; font-family: 'Inter', sans-serif; letter-spacing: -0.5px; }
-        .blog-desc { font-size: 15px; color: #4B5563; line-height: 1.6; margin-bottom: 24px; font-family: 'Inter', sans-serif; flex: 1; }
-        .blog-read { font-size: 14px; font-weight: 600; color: #111111; text-decoration: none; display: flex; align-items: center; gap: 4px; text-transform: uppercase; letter-spacing: 1px; font-family: 'Inter', sans-serif; }
+        .blog-img-wrapper { width: 100%; height: 280px; overflow: hidden; flex-shrink: 0; }
+        .blog-img { width: 100%; height: 100%; object-fit: cover; display: block; border-bottom: 1px solid #E5E7EB; }
+        .blog-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; justify-content: flex-start; }
+        .blog-tag { font-size: 11px; font-weight: 800; color: #A03FA3; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; font-family: 'Inter', sans-serif; display: block; }
+        .blog-date { font-size: 13px; color: #6B7280; font-family: 'Inter', sans-serif; margin-bottom: 10px; font-weight: 600; display: block; }
+        .blog-title { font-size: clamp(20px, 2vw, 24px); font-weight: 800; color: #111111; margin-bottom: 15px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px; line-height: 1.3; text-decoration: none !important; }
+        .blog-desc { font-size: 15px; color: #4B5563; line-height: 1.6; font-family: 'Inter', sans-serif; margin-bottom: 30px; }
+        .blog-read { margin-top: auto; font-size: 14px; font-weight: 700; color: #111111; display: inline-flex; align-items: center; border-bottom: 2px solid #111111; padding-bottom: 4px; text-decoration: none; width: fit-content; transition: color 0.2s, border-color 0.2s; text-transform: uppercase; letter-spacing: 1px; }
+        .blog-read:hover { color: #A03FA3; border-color: #A03FA3; }
         
         /* Subscribe Area */
         .subscribe-box { background: #FFFFFF; border-radius: 4px; padding: 60px 40px; margin-top: 15px; display: flex; flex-direction: column; align-items: center; color: #111111; text-align: center; border: 1px solid #111111; }
@@ -722,7 +725,7 @@
                 <!-- Post 1 -->
                 <a href="https://unicoin.com/news/how-women-are-transforming-the-gulfs-investment-landscape" target="_blank" class="blog-card">
                     <div class="blog-img-wrapper">
-                        <img src="./public/images/common/manifesto-invest.jpg" class="blog-img" alt="Women Transforming Investment">
+                        <div class="blog-img-wrapper"><img src="./public/images/common/manifesto-invest.jpg" class="blog-img" alt="Women Transforming Investment"></div>
                         <span class="blog-tag">Global Leadership</span>
                     </div>
                     <div class="blog-content">
@@ -734,7 +737,7 @@
                 <!-- Post 2 -->
                                 <a href="#" class="blog-card">
                     <div class="blog-img-wrapper">
-                        <img src="./public/images/common/manifesto-coach.jpg" class="blog-img" alt="War on Crypto">
+                        <div class="blog-img-wrapper"><img src="./public/images/common/manifesto-coach.jpg" class="blog-img" alt="War on Crypto"></div>
                         <span class="blog-tag">Regulation</span>
                     </div>
                     <div class="blog-content">
@@ -746,7 +749,7 @@
                 <!-- Post 3 -->
                                 <a href="#" class="blog-card">
                     <div class="blog-img-wrapper">
-                        <img src="./public/images/common/partner1.jpg" class="blog-img" alt="Unicorn Hunters">
+                        <div class="blog-img-wrapper"><img src="./public/images/common/partner1.jpg" class="blog-img" alt="Unicorn Hunters"></div>
                         <span class="blog-tag">Ecosystem</span>
                     </div>
                     <div class="blog-content">

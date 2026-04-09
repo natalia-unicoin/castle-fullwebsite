@@ -139,6 +139,47 @@
         }
 
         /* Full Site Layout Styles */
+        /* -- NATIVE MOBILE HORIZONTAL SCROLL ENGINE -- */
+        @media (max-width: 900px) {
+            .mobile-scroll-row {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+                scroll-snap-type: x mandatory;
+                gap: 20px !important;
+                padding-bottom: 20px !important;
+                margin-left: -5vw;
+                margin-right: -5vw;
+                padding-left: 5vw !important;
+                padding-right: 5vw !important;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; /* Firefox */
+            }
+            .mobile-scroll-row::-webkit-scrollbar { display: none; }
+            .mobile-scroll-row > * {
+                flex: 0 0 85% !important; /* 85% width lets the next card peek */
+                scroll-snap-align: center;
+                max-width: none !important;
+                width: 85% !important;
+                height: 100% !important;
+                min-height: 100% !important;
+            }
+            /* The pagination pill container */
+            .mobile-scroll-indicators {
+                display: flex; justify-content: center; gap: 8px; margin-top: 10px; margin-bottom: 40px;
+            }
+            .scroll-dot {
+                width: 8px; height: 8px; border-radius: 4px; background: #E5E7EB; transition: all 0.3s ease;
+            }
+            .scroll-dot.active {
+                width: 24px; background: #111111; /* Expands to a pill */
+            }
+        }
+        @media (min-width: 901px) {
+            .mobile-scroll-indicators { display: none !important; }
+        }
+
         /* Typography anti-widow engine */
         h1, h2, h3, h4 { text-wrap: balance; }
         p, li, span, a { text-wrap: pretty; }
@@ -311,7 +352,7 @@
         /* 11. Blog & Subscribe */
         .blog-section { background-color: #FFFFFF; padding: 60px 0; border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; text-align: center; }
                 .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; text-align: left; align-items: stretch; }
-        @media(max-width: 900px) { .blog-grid { display: flex; flex-direction: column; } }
+        
         .blog-card { background: #FFFFFF; border-radius: 4px; overflow: hidden; border: 1px solid #E5E7EB; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; height: 100%; text-decoration: none !important; }
         .blog-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.06); }
         .blog-img-wrapper { width: 100%; height: 280px; overflow: hidden; flex-shrink: 0; }
@@ -582,7 +623,7 @@
             </div>
 
             <!-- 4 Image Cards Grid -->
-            <div class="color-reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 120px; transition: opacity 0.5s ease; transition-delay: 0.2s;">
+            <div class="color-reveal mobile-scroll-row" id="earn-scroll" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 20px; transition: opacity 0.5s ease; transition-delay: 0.2s;">
                 <!-- Card 1 -->
                 <div style="background: #F8F8FA; border-radius: 4px; overflow: hidden; border: 1px solid #E5E7EB; text-align: left;">
                     <div style="height: 220px; width: 100%; overflow: hidden;">
@@ -623,6 +664,7 @@
                         <p style="font-size: 16px; color: #4B5563; line-height: 1.6;">Get rewarded for your expertise and influence.</p>
                     </div>
                 </div>
+            <div class="mobile-scroll-indicators" data-target="earn-scroll"></div>
             </div>
 
             <!-- Sub Headline 2 & List -->
@@ -662,7 +704,7 @@
                 Join the movement to redesign women's wealth. We're looking for aligned partners to grow the ecosystem.
             </p>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            <div class="mobile-scroll-row" id="partner-scroll" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
                 <!-- Card 1 -->
                 <div class="color-reveal" style="background: #FAFAFA; border-radius: 4px; overflow: hidden; border: 1px solid #E5E7EB; display: flex; text-align: left; flex-direction: column; transition: opacity 0.5s ease;">
                     <img src="./public/images/common/partner1.jpg" alt="Women Organizations" style="width: 100%; height: 220px; object-fit: cover;">
@@ -702,6 +744,7 @@
                         <a href="#" style="font-size: 12px; font-weight: 800; color: #111111; text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none;">LEARN ABOUT THE MODEL</a>
                     </div>
                 </div>
+            <div class="mobile-scroll-indicators" data-target="earn-scroll"></div>
             </div>
         </div>
     </section>
@@ -721,7 +764,7 @@
             <p class="section-eyebrow" style="color: #A03FA3; font-weight: 700; letter-spacing: 4px; margin-bottom: 24px; text-transform: uppercase;">Insights & Growth</p>
             <h2 class="section-title" style="margin-bottom: 24px;">Our Latest Thinking</h2>
             
-            <div class="blog-grid">
+            <div class="blog-grid mobile-scroll-row" id="blog-scroll">
                 <!-- Post 1 -->
                 <a href="https://unicoin.com/news/how-women-are-transforming-the-gulfs-investment-landscape" target="_blank" class="blog-card">
                     <div class="blog-img-wrapper">
@@ -759,6 +802,7 @@
                     </div>
                 </a>
             </div>
+            <div class="mobile-scroll-indicators" data-target="blog-scroll"></div>
 
             <!-- Blog CTA -->
             <div style="margin-top: 50px; text-align: center;">
@@ -877,6 +921,48 @@
             </div>
         </div>
     </div>
+
+    <!-- Mobile Horizontal Scroll Intersection Observer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const indicatorContainers = document.querySelectorAll('.mobile-scroll-indicators');
+            
+            indicatorContainers.forEach(container => {
+                const targetId = container.getAttribute('data-target');
+                const scrollRow = document.getElementById(targetId);
+                if (!scrollRow) return;
+                
+                const cards = Array.from(scrollRow.children);
+                if (cards.length === 0) return;
+                
+                // Create dots
+                cards.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.className = 'scroll-dot' + (index === 0 ? ' active' : '');
+                    container.appendChild(dot);
+                });
+                
+                const dots = container.querySelectorAll('.scroll-dot');
+                
+                // Observer to update dots when scrolling
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const index = cards.indexOf(entry.target);
+                            dots.forEach(d => d.classList.remove('active'));
+                            if(dots[index]) dots[index].classList.add('active');
+                        }
+                    });
+                }, {
+                    root: scrollRow,
+                    threshold: 0.6 // Card is active when 60% visible
+                });
+                
+                cards.forEach(card => observer.observe(card));
+            });
+        });
+    </script>
 </body>
+
 
 </html>

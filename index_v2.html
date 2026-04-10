@@ -30,7 +30,7 @@
             overflow-x: hidden;
         }
         h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; }
-        .accent-text { font-family: 'Caveat', cursive; font-size: 1.0rem; color: #A03FA3; transform: rotate(-2deg); display: inline-block; }
+        .accent-text {  font-size: 1.0rem; color: #A03FA3; transform: rotate(-2deg); display: inline-block; }
         /* Header */
         header {
             position: fixed; top: 0; left: 0; width: 100%; padding: 24px clamp(30px, 5vw, 100px);
@@ -85,7 +85,7 @@
         }
         .hero-container {
             position: relative; z-index: 3; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
-            width: 100%; max-width: 1200px; margin-left: clamp(30px, 5vw, 80px); padding: 15vh 0 40px 0;
+            width: 100%; max-width: 1200px; margin-left: clamp(52px, 6vw, 96px); padding: 15vh 0 40px 0;
         }
         .hero-img {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; z-index: 1; opacity: 1;
@@ -130,7 +130,7 @@
             .logo img { height: 24px; }
             .hero { padding: 0; }
             .hero-img { object-position: center top; }
-            .hero-title { font-size: clamp(44px, 11vw, 54px); text-align: center; line-height: 1; letter-spacing: -2px; }
+            .hero-title { font-size: clamp(52px, 12vw, 64px); text-align: center; line-height: 1; letter-spacing: -2px; }
             .hero-container { padding: 0 20px 40px 20px; margin-left: 0; justify-content: flex-end; align-items: center; }
             .hero-content { gap: 20px; text-align: center; align-items: center; justify-content: flex-end; padding-top: 45vh; }
             
@@ -211,8 +211,8 @@
             padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.03);
             display: flex; flex-direction: column; align-items: flex-start;
         }
-        .bento-card h3 { font-size: clamp(28px, 3vw, 40px); font-weight: 700; margin-bottom: 20px; letter-spacing: -1px; color: #111111; }
-        .bento-card p { font-size: 18px; color: #1A1A1A; line-height: 1.6; margin-bottom: 30px; flex-grow: 1; }
+        .bento-card h3 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; margin-bottom: 20px; letter-spacing: -1px; color: #111111; }
+        .bento-card p { font-size: 20px; color: #4B5563; line-height: 1.6; margin-bottom: 30px; flex-grow: 1; }
         .btn-secondary {
             background-color: #111111; color: white; padding: 15px 32px; border-radius: 4px;
             text-decoration: none; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
@@ -222,8 +222,8 @@
 
         /* Global typography helpers */
         .section-eyebrow { color: #A03FA3; font-weight: 700; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px; text-align: center; display: block; }
-        .section-title { font-size: clamp(48px, 5.5vw, 76px); font-weight: 700; letter-spacing: -3px; margin-bottom: 20px; color: #111111; text-align: center; }
-        .section-subtitle { font-size: clamp(20px, 3vw, 24px); font-weight: 400; color: #1A1A1A; max-width: 1100px; margin: 0 auto 60px auto; line-height: 1.6; text-align: center; font-family: 'Inter', sans-serif; }
+        .section-title { font-size: clamp(48px, 8vw, 110px); font-weight: 700; letter-spacing: -3px; margin-bottom: 20px; color: #111111; text-align: center; }
+        .section-subtitle { font-size: clamp(20px, 2.5vw, 32px); font-weight: 400; color: #1A1A1A; max-width: 1100px; margin: 0 auto 60px auto; line-height: 1.6; text-align: center; font-family: 'Inter', sans-serif; }
 
         /* 4. Program (Genesis Challenge) */
         .program-section { background-color: #FFFFFF; padding: 60px 0; border-bottom: 1px solid #F3F4F6; text-align: center; }
@@ -237,7 +237,7 @@
         @media(min-width: 1024px){ .incentive-grid { grid-template-columns: 1fr 1fr; } }
         .incentive-content { display: flex; flex-direction: column; justify-content: center; }
         .incentive-subheadline { font-size: 24px; font-weight: 700; color: #111111; margin-bottom: 12px; }
-        .incentive-desc { font-size: clamp(20px, 3vw, 24px); font-weight: 400; color: #1A1A1A; line-height: 1.6; margin-bottom: 40px; font-family: 'Inter', sans-serif; }
+        .incentive-desc { font-size: clamp(20px, 2.5vw, 32px); font-weight: 400; color: #1A1A1A; line-height: 1.6; margin-bottom: 40px; font-family: 'Inter', sans-serif; }
         .incentive-bullets { margin-bottom: 40px; }
         .incentive-bullets p { font-size: 16px; color: #1A1A1A; margin-bottom: 16px; }
         .incentive-bullets ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr; gap: 16px; margin: 0; }
@@ -345,8 +345,8 @@
         /* 11. The Horizon */
         .horizon-section { background-color: #FFFFFF; padding: 60px 0; border-bottom: 1px solid #EAE0D5; }
         .horizon-container { max-width: 1100px; margin: 0 auto; text-align: left; }
-        .horizon-bold { font-size: clamp(20px, 3vw, 24px); font-weight: 700; color: #111111; margin-bottom: 30px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px; }
-        .horizon-text { font-size: clamp(18px, 2.5vw, 22px); color: #1A1A1A; line-height: 1.6; margin-bottom: 30px; font-family: 'Inter', sans-serif; }
+        .horizon-bold { font-size: clamp(20px, 2.5vw, 32px); font-weight: 700; color: #111111; margin-bottom: 30px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px; }
+        .horizon-text { font-size: clamp(20px, 2.5vw, 28px); color: #1A1A1A; line-height: 1.6; margin-bottom: 30px; font-family: 'Inter', sans-serif; }
         .horizon-badge { display: inline-block; padding: 8px 24px; border-radius: 4px; border: 1px solid rgba(160,63,163,0.3); color: #A03FA3; font-size: 13px; font-weight: 700; letter-spacing: 1px; font-family: 'Inter', sans-serif; margin-top: 20px; }
 
         /* 11. Blog & Subscribe */
@@ -380,9 +380,9 @@
         .final-cta-section { background-color: #A03FA3; padding: 60px 0; text-align: center; }
         .final-cta-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .final-title { font-size: clamp(48px, 6vw, 76px); font-weight: 700; color: #FFFFFF; line-height: 1.1; letter-spacing: -2.5px; margin-bottom: 40px; font-family: 'Inter', sans-serif; text-align: center; }
-        .final-title .transparent-text { color: #F6F1E9; opacity: 0.8; display: block; font-family: 'Caveat', cursive; font-size: 1.0em; font-weight: 500; text-transform: none; letter-spacing: 0; line-height: 1; margin-top: 10px; }
+        .final-title .transparent-text { color: #F6F1E9; opacity: 0.8; display: block;  font-size: 1.0em; font-weight: 500; text-transform: none; letter-spacing: 0; line-height: 1; margin-top: 10px; }
 
-        .final-watermark { font-family: 'Caveat', cursive; font-size: clamp(80px, 12vw, 160px); color: #111111; opacity: 0.15; font-weight: 700; margin: 0; line-height: 0.8; }
+        .final-watermark {  font-size: clamp(80px, 12vw, 160px); color: #111111; opacity: 0.15; font-weight: 700; margin: 0; line-height: 0.8; }
         .process-card { background: linear-gradient(180deg, #FFFFFF 0%, #F3F4F6 100%); border-radius: 4px; padding: 40px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; min-height: 500px; text-align: left; transition: transform 0.3s, box-shadow 0.3s; }
         .process-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
 
@@ -441,7 +441,7 @@
         
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title" style="font-size: clamp(56px, 7vw, 96px); line-height: 0.95; letter-spacing: -3px; color: #FFFFFF;">Castle is the <span class="highlight">OS</span><sup style="font-size: 0.5em; color: #A03FA3; margin-left: 5px;">*</sup><br>of Women's Wealth.</h1>
+                <h1 class="hero-title" style="font-size: clamp(64px, 10vw, 120px); line-height: 0.95; letter-spacing: -3px; color: #FFFFFF;">Castle is the <span class="highlight">OS</span><sup style="font-size: 0.5em; color: #A03FA3; margin-left: 5px;">*</sup><br>of Women's Wealth.</h1>
                 <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-top: -10px; margin-bottom: 20px; font-weight: 500; font-family: 'Inter', sans-serif; letter-spacing: 1px; text-transform: uppercase;">*Operating System</p>
                 <p class="hero-description" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-top: 0;">A Financial Ecosystem where Intelligence meets community—empowering women to build real wealth, achieve independence, and create lasting legacy.</p>
                 <div class="hero-cta-group">
@@ -456,11 +456,11 @@
     
     <!-- Statement -->
     <section class="statement-section" style="background-color: #FFFFFF; padding: 120px 0; text-align: center;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 5vw;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 5vw;">
             <h2 class="color-reveal" style="font-size: clamp(48px, 6vw, 76px); font-weight: 900; line-height: 1.1; color: #111111; margin: 0 0 20px 0; letter-spacing: -2px; text-wrap: balance;">
                 Women were Taught to Save,<br>not to <span style="color: #A03FA3;">Build Wealth.</span>
             </h2>
-            <p class="color-reveal" style="font-size: clamp(32px, 4vw, 48px); font-weight: 700; color: #A03FA3; font-family: 'Caveat', cursive; line-height: 1.1; margin-bottom: 50px;">
+            <p class="color-reveal" style="font-size: clamp(32px, 4vw, 48px); font-weight: 700; color: #A03FA3;  line-height: 1.1; margin-bottom: 50px;">
                 Castle changes that.
             </p>
             <p class="color-reveal" style="font-size: clamp(20px, 2.5vw, 26px); color: #4B5563; line-height: 1.6; font-weight: 400; margin-bottom: 50px; text-wrap: pretty;">
@@ -475,15 +475,15 @@
 
     <!-- #3 Manifesto -->
     <section id="reality" style="padding: 120px 0; background-color: #F9F9F9; text-align: center;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 5vw;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 5vw;">
 
             <p class="color-reveal" style="font-size: 14px; font-weight: 800; color: #A03FA3; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px;">Our Manifesto</p>
 
-            <h2 class="color-reveal" style="font-size: clamp(40px, 5vw, 64px); font-weight: 900; color: #111111; letter-spacing: -2px; line-height: 1.1; margin-bottom: 40px;">
+            <h2 class="color-reveal" style="font-size: clamp(40px, 4vw, 72px); font-weight: 900; color: #111111; letter-spacing: -2px; line-height: 1.1; margin-bottom: 40px;">
                 For generations women were told:
             </h2>
 
-            <div class="color-reveal" style="font-family: 'Caveat', cursive; font-size: clamp(28px, 4vw, 48px); color: #A03FA3; font-weight: 700; line-height: 1.3; margin-bottom: 60px;">
+            <div class="color-reveal" style=" font-size: clamp(28px, 4vw, 48px); color: #A03FA3; font-weight: 700; line-height: 1.3; margin-bottom: 60px;">
                 <p style="margin-bottom: 8px;">Be careful with money.</p>
                 <p style="margin-bottom: 8px;">Be modest with money.</p>
                 <p style="margin-bottom: 0;">Let someone else manage the investments.</p>
@@ -506,14 +506,14 @@
             <h2 class="color-reveal" style="font-size: clamp(48px, 6vw, 76px); font-weight: 900; color: #111111; margin-bottom: 20px; letter-spacing: -2px; line-height: 1.1;">
                 What Makes Us Different?
             </h2>
-            <p class="color-reveal" style="font-size: clamp(20px, 2.5vw, 26px); color: #4B5563; line-height: 1.6; font-weight: 500; max-width: 800px; margin: 0 auto 60px auto;">
+            <p class="color-reveal" style="font-size: clamp(20px, 2.5vw, 26px); color: #4B5563; line-height: 1.6; font-weight: 500; max-width: 1200px; margin: 0 auto 60px auto;">
                 Most programs teach what to do with money.<br>
                 <strong style="color: #A03FA3;">We transform how women think about money.</strong>
             </p>
 
-            <div class="color-reveal bento-grid" style="max-width: 1000px; margin: 0 auto; text-align: left;">
+            <div class="color-reveal bento-grid" style="max-width: 1200px; margin: 0 auto; text-align: left;">
                 <!-- Formula Billboard -->
-                <div style="grid-column: 1 / -1; background: linear-gradient(135deg, #111111 0%, #2A102B 100%); border-radius: 4px; padding: clamp(40px, 8vw, 80px); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <div style="grid-column: 1 / -1; background: linear-gradient(135deg, #111111 0%, #2A102B 100%); border-radius: 4px; padding: clamp(52px, 6vw, 96px); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
                     <p style="font-size: 13px; font-weight: 800; color: #E2A0E4; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 24px;">Castle Combines</p>
                     <p style="font-size: clamp(28px, 4.5vw, 52px); font-weight: 800; color: #FFFFFF; line-height: 1.25; margin: 0; letter-spacing: -2px;">
                         Psychology <span style="color: rgba(255,255,255,0.25); font-weight: 300;">+</span> Finance <span style="color: rgba(255,255,255,0.25); font-weight: 300;">+</span><br>Technology <span style="color: rgba(255,255,255,0.25); font-weight: 300;">+</span> Community
@@ -539,7 +539,7 @@
         <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 5vw;">
 
             <p class="color-reveal" style="font-size: 14px; font-weight: 800; color: #A03FA3; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px;">Core Platform Pillars</p>
-            <h2 class="color-reveal" style="font-size: clamp(40px, 5vw, 64px); font-weight: 900; color: #111111; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px;">
+            <h2 class="color-reveal" style="font-size: clamp(40px, 4vw, 72px); font-weight: 900; color: #111111; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px;">
                 Built to Transform Every Dimension of Your Wealth.
             </h2>
             <p class="color-reveal" style="font-size: clamp(18px, 2vw, 22px); color: #4B5563; font-weight: 400; max-width: 700px; margin: 0 auto 60px auto; line-height: 1.6;">
@@ -609,13 +609,13 @@
     <section style="position: relative; min-height: 700px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; padding: 120px 0;">
         <img src="./public/images/common/community-bg.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(160,63,163,0.85); z-index: 2;"></div>
-        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 5vw; position: relative; z-index: 3;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 5vw; position: relative; z-index: 3;">
 
-            <h2 class="color-reveal" style="font-size: clamp(48px, 6vw, 84px); font-weight: 900; color: #FFFFFF; letter-spacing: -3px; line-height: 1.05; margin-bottom: 50px;">
+            <h2 class="color-reveal" style="font-size: clamp(48px, 8vw, 110px); font-weight: 900; color: #FFFFFF; letter-spacing: -3px; line-height: 1.05; margin-bottom: 50px;">
                 Women Don't Build<br>Wealth Alone.
             </h2>
 
-            <div class="color-reveal" style="display: flex; justify-content: center; align-items: center; gap: clamp(20px, 5vw, 80px); margin-bottom: 60px; flex-wrap: wrap;">
+            <div class="color-reveal" style="display: flex; justify-content: center; align-items: center; gap: clamp(52px, 6vw, 96px); margin-bottom: 60px; flex-wrap: wrap;">
                 <span style="font-size: clamp(20px, 2.5vw, 28px); font-weight: 800; color: #FFFFFF; letter-spacing: 3px; text-transform: uppercase;">CIRCLES</span>
                 <span style="font-size: clamp(20px, 2.5vw, 28px); font-weight: 800; color: #E2A0E4; letter-spacing: 3px; text-transform: uppercase;">COHORTS</span>
                 <span style="font-size: clamp(20px, 2.5vw, 28px); font-weight: 800; color: #FFFFFF; letter-spacing: 3px; text-transform: uppercase;">NETWORKS</span>
@@ -638,7 +638,7 @@
     <section id="partnerships" class="partners-section" style="background-color: #FFFFFF; padding: 120px 0; border-top: 1px solid #E5E7EB; font-family: 'Inter', sans-serif;">
         <div class="container" style="margin: 0 auto; text-align: center;">
             <h2 style="font-size: clamp(48px, 6vw, 76px); font-weight: 900; color: #111111; letter-spacing: -3px; margin-bottom: 15px; line-height: 1.1;">Partner With Castle</h2>
-            <p style="font-size: clamp(18px, 2vw, 24px); color: #6B7280; font-weight: 400; max-width: 1000px; margin: 0 auto 60px auto;">
+            <p style="font-size: clamp(18px, 2vw, 24px); color: #6B7280; font-weight: 400; max-width: 1200px; margin: 0 auto 60px auto;">
                 Join the movement to redesign women's wealth. We're looking for aligned partners to grow the ecosystem.
             </p>
             
@@ -690,15 +690,15 @@
 
     <!-- Challenge Teaser -->
     <section style="padding: 120px 0; background-color: #FFFFFF; text-align: center;">
-        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 5vw;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 5vw;">
             <p style="font-size: 14px; font-weight: 800; color: #A03FA3; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px;">21-Day Program</p>
-            <h2 class="color-reveal" style="font-size: clamp(48px, 6vw, 80px); font-weight: 900; color: #111111; letter-spacing: -3px; line-height: 1.05; margin-bottom: 10px;">
+            <h2 class="color-reveal" style="font-size: clamp(52px, 6vw, 96px); font-weight: 900; color: #111111; letter-spacing: -3px; line-height: 1.05; margin-bottom: 10px;">
                 The Castle
             </h2>
-            <h2 class="color-reveal" style="font-size: clamp(40px, 6vw, 72px); font-weight: 700; color: #A03FA3; font-family: 'Caveat', cursive; letter-spacing: 0; line-height: 1; margin-bottom: 40px;">
+            <h2 class="color-reveal" style="font-size: clamp(44px, 5vw, 84px); font-weight: 700; color: #A03FA3;  letter-spacing: 0; line-height: 1; margin-bottom: 40px;">
                 Wealth Reset &amp; Rewire Challenge™
             </h2>
-            <p class="color-reveal" style="font-size: clamp(18px, 2.5vw, 22px); color: #4B5563; line-height: 1.7; font-weight: 400; margin-bottom: 50px;">
+            <p class="color-reveal" style="font-size: clamp(20px, 2.5vw, 28px); color: #4B5563; line-height: 1.7; font-weight: 400; margin-bottom: 50px;">
                 A focused sprint designed to rewire your financial habits and help you build your first intelligent portfolio alongside thousands of other driven women.
             </p>
             <a href="./challenge.html" style="display: inline-block; background-color: #A03FA3; color: #FFFFFF; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; padding: 22px 60px; border-radius: 50px; font-size: 14px; text-decoration: none; box-shadow: 0 15px 40px rgba(160,63,163,0.3); transition: transform 0.2s, box-shadow 0.2s;">
@@ -761,9 +761,9 @@
 
     <!-- Email CTA -->
     <section style="background-color: #A03FA3; padding: 120px 0; text-align: center;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 5vw;">
-            <h3 style="font-size: clamp(36px, 5vw, 64px); font-weight: 900; color: #FFFFFF; margin-bottom: 20px; letter-spacing: -2px; line-height: 1.1; font-family: 'Inter', sans-serif;">Build your wealth. Own your future.</h3>
-            <p style="font-size: clamp(18px, 2.5vw, 24px); color: rgba(255,255,255,0.9); line-height: 1.6; max-width: 700px; margin: 0 auto 50px auto; font-family: 'Inter', sans-serif;">Castle gives you the tools, intelligence and community to take control of your money and start building real wealth.</p>
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 5vw;">
+            <h3 style="font-size: clamp(40px, 4vw, 72px); font-weight: 900; color: #FFFFFF; margin-bottom: 20px; letter-spacing: -2px; line-height: 1.1; font-family: 'Inter', sans-serif;">Build your wealth. Own your future.</h3>
+            <p style="font-size: clamp(20px, 2.5vw, 28px); color: rgba(255,255,255,0.9); line-height: 1.6; max-width: 700px; margin: 0 auto 50px auto; font-family: 'Inter', sans-serif;">Castle gives you the tools, intelligence and community to take control of your money and start building real wealth.</p>
             <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Subscribed!');" style="display: flex; gap: 15px; max-width: 600px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
                 <input type="email" class="subscribe-input" placeholder="Enter your email" required style="flex: 1; min-width: 250px; padding: 22px 28px; border-radius: 50px; border: none; font-size: 16px; font-family: 'Inter', sans-serif; outline: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                 <button type="submit" style="background-color: #111111; color: #FFFFFF; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; padding: 22px 40px; border-radius: 50px; border: none; font-size: 14px; cursor: pointer; transition: background 0.2s, transform 0.2s; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">GET EARLY ACCESS</button>
@@ -825,7 +825,7 @@
 
     <!-- Manifesto Modal -->
     <div id="manifestoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background: rgba(17,17,17,0.85); align-items: center; justify-content: center; backdrop-filter: blur(8px);">
-        <div style="background: #FFFFFF; padding: 40px 30px; border-radius: 4px; max-width: 800px; width: 90%; position: relative; max-height: 90vh; overflow-y: auto; text-align: center; box-shadow: 0 40px 100px rgba(0,0,0,0.4);">
+        <div style="background: #FFFFFF; padding: 40px 30px; border-radius: 4px; max-width: 1200px; width: 90%; position: relative; max-height: 90vh; overflow-y: auto; text-align: center; box-shadow: 0 40px 100px rgba(0,0,0,0.4);">
             <button onclick="document.getElementById('manifestoModal').style.display='none';" style="position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 30px; cursor: pointer; color: #4B5563; line-height: 1; padding: 0;">&times;</button>
             
             <h2 style="font-size: clamp(28px, 4vw, 40px); font-weight: 800; color: #111111; margin-bottom: 25px; letter-spacing: -1px;">The Core Manifesto</h2>
@@ -833,7 +833,7 @@
             <div style="font-family: 'Inter', sans-serif; font-size: clamp(15px, 2vw, 18px); color: #1A1A1A; line-height: 1.5; font-weight: 400;">
                 <p style="margin-bottom: 15px;">For generations women were told:</p>
                 
-                <div style="margin-bottom: 25px; font-family: 'Caveat', cursive; font-size: clamp(26px, 3vw, 36px); color: #A03FA3; line-height: 1.2; font-weight: 400;">
+                <div style="margin-bottom: 25px;  font-size: clamp(26px, 3vw, 36px); color: #A03FA3; line-height: 1.2; font-weight: 400;">
                     <p style="margin-bottom: 5px;">Be careful with money.</p>
                     <p style="margin-bottom: 5px;">Be modest with money.</p>
                     <p style="margin-bottom: 0;">Let someone else manage the investments.</p>
@@ -844,11 +844,11 @@
                     The question is not whether women will have money.<br>
                     The question is <span style="color: #A03FA3;">whether they will own their financial future.</span>
                 </p>
-                <p style="font-size: clamp(18px, 2.5vw, 24px); font-weight: 600; color: #111111; margin-bottom: 10px; line-height: 1.4; letter-spacing: -0.5px;">
+                <p style="font-size: clamp(20px, 2.5vw, 28px); font-weight: 600; color: #111111; margin-bottom: 10px; line-height: 1.4; letter-spacing: -0.5px;">
                     Castle exists to help women: understand money, master money, build wealth and build their own castles.
                 </p>
                 
-                <p style="font-family: 'Caveat', cursive; font-size: clamp(42px, 5vw, 56px); font-weight: 400; color: #111111; margin-top: 25px; line-height: 1; text-align: center;">Together.</p>
+                <p style=" font-size: clamp(42px, 5vw, 56px); font-weight: 400; color: #111111; margin-top: 25px; line-height: 1; text-align: center;">Together.</p>
             </div>
         </div>
     </div>

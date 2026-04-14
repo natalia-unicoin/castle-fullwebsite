@@ -191,6 +191,23 @@
         @media (min-width: 901px) {
             .mobile-scroll-indicators { display: none !important; }
         }
+        
+        /* Mobile Hamburger Icon (Basic) */
+        .mobile-menu-toggle { display: none; background: none; border: none; font-size: 24px; color: #111111; cursor: pointer; }
+        @media (max-width: 768px) {
+            .mobile-menu-toggle { display: block; }
+            .nav-links { display: none; width: 100%; position: absolute; top: 100%; left: 0; background: #FFFFFF; flex-direction: column; padding: 20px 0; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-top: 1px solid #EEE; }
+            .nav-links.active { display: flex !important; }
+            .nav-links a { color: #1A1A1A !important; padding: 10px 5vw; }
+            
+            /* Global mobile centering utility */
+            .mobile-text-center { text-align: center !important; align-items: center !important; justify-content: center !important; }
+            .mobile-text-center p, .mobile-text-center h2, .mobile-text-center h3 { margin-left: auto; margin-right: auto; text-align: center !important; }
+            
+            /* Better unified mobile framing for cards (no harsh cropping) */
+            .partner-card, .pillar-card, .manifesto-card, .diff-card { aspect-ratio: 4/5 !important; }
+            .partner-card img, .pillar-card img, .manifesto-card img, .diff-card img { object-position: center 30%; }
+        }
 
         /* Typography anti-widow engine */
         h1, h2, h3, h4 { text-wrap: balance; }
@@ -212,7 +229,6 @@
         .manifesto-card { position: relative; aspect-ratio: 9/16; border-radius: 5px; overflow: hidden; display: flex; align-items: flex-end; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .manifesto-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(0,0,0,0.12); }
         @media (max-width: 1024px) { .manifesto-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
-        @media (max-width: 768px) { .manifesto-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 30px; gap: 16px; } .manifesto-card { flex: 0 0 80%; scroll-snap-align: center; } }
 
         /* 3. Bento Box */
         .bento-section { background-color: #FFFFFF; }
@@ -383,7 +399,8 @@
         .subscribe-box h3 { font-size: clamp(28px, 4vw, 36px); font-weight: 700; margin-bottom: 16px; color: #111111; letter-spacing: -1px; font-family: 'Inter', sans-serif; }
         .subscribe-box p { font-size: 16px; color: #4B5563; max-width: 500px; margin-bottom: 30px; font-family: 'Inter', sans-serif; line-height: 1.5; }
         .subscribe-form { display: flex; gap: 12px; width: 100%; max-width: 480px; margin: 0 auto; }
-        @media(max-width: 600px) { .subscribe-form { flex-direction: column; } }
+        .subscribe-input { flex: 1; padding: 16px 24px; border-radius: 50px; border: 1px solid #D1D5DB; font-size: 16px; font-family: 'Inter', sans-serif; outline: none; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); }
+        @media(max-width: 600px) { .subscribe-form { flex-direction: column; } .subscribe-input { flex: none; width: 100%; } }
         .subscribe-input { flex: 1; padding: 16px 24px; border-radius: 5px; border: 1px solid #D1D5DB; background: #FFFFFF; color: #111111; font-size: 16px; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
         .subscribe-input:focus { border-color: #A03FA3; box-shadow: 0 0 0 3px rgba(160,63,163,0.1); }
         .subscribe-input::placeholder { color: #9CA3AF; }
@@ -507,12 +524,15 @@
                 <img src="./public/images/common/logo-light.png?v=4" alt="CASTLE" class="logo-light">
                 <img src="./public/images/common/logo.png?v=4" alt="CASTLE" class="logo-dark">
             </a>
-            <nav class="nav-links desktop-only">
+            <nav class="nav-links" id="main-nav">
                 <a href="#reality" style="text-transform: none;">About Us</a>
                 <a href="partners.html" style="text-transform: none;">Partner</a>
                 <a href="challenge.html" style="text-transform: none;">Challenge</a>
                 <a href="#blog" style="text-transform: none;">Blog</a>
             </nav>
+            <button class="mobile-menu-toggle" onclick="document.getElementById('main-nav').classList.toggle('active')">
+                ☰
+            </button>
             <div class="header-actions">
                 <!-- Blank for clean look -->
             </div>
@@ -612,7 +632,7 @@
             </div>
 
             <!-- Right Side Content -->
-            <div style="flex: 1 1 400px; text-align: left; display: flex; flex-direction: column; justify-content: center;">
+            <div class="mobile-text-center" style="flex: 1 1 400px; text-align: left; display: flex; flex-direction: column; justify-content: center;">
                 <h2 style="font-size: clamp(36px, 4.5vw, 64px); font-weight: 900; color: #111111; line-height: 1.1; margin-bottom: 25px; letter-spacing: -2px;">
                     What Makes Us<br>Different?
                 </h2>
@@ -620,7 +640,7 @@
                     Most programs teach what to do with money. We transform how women think about money. Castle is a scalable, measurable transformation model designed specifically for the unique ways women build wealth.
                 </p>
                 
-                <div style="display: flex; gap: clamp(6px, 1vw, 10px); margin-bottom: 50px; flex-wrap: nowrap; white-space: nowrap; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;">
+                <div class="mobile-text-center" style="display: flex; gap: clamp(6px, 1vw, 10px); margin-bottom: 50px; flex-wrap: nowrap; white-space: nowrap; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;">
                     <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px;">PSYCHOLOGY</span>
                     <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px;">FINANCE</span>
                     <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px;">TECHNOLOGY</span>
@@ -648,7 +668,7 @@
             </p>
 
             <!-- 5 Pillars Grid -->
-            <div class="color-reveal mobile-scroll-row" id="pillars-scroll" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; text-align: left;">
+            <div class="color-reveal mobile-scroll-row mobile-text-center" id="pillars-scroll" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; text-align: left;">
 
                 <!-- 01 Cohort Learning -->
                 <div class="pillar-card">
@@ -742,7 +762,7 @@
                 Join the movement to redesign women's wealth. We're looking for aligned partners to grow the ecosystem.
             </p>
             
-                        <div class="color-reveal partner-grid mobile-scroll-row" id="partner-scroll" style="text-align: left;">
+                        <div class="color-reveal partner-grid mobile-scroll-row mobile-text-center" id="partner-scroll" style="text-align: left;">
                 <!-- Card 1 -->
                 <div class="partner-card">
                     <img src="./public/images/common/network.jpg" alt="Women Organizations">
@@ -874,7 +894,7 @@
             <h4 style="font-size: clamp(24px, 3vw, 32px); font-weight: 800; color: #111111; margin-bottom: 15px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px;">Subscribe to our Newsletter</h4>
             <p style="color: #4B5563; font-size: clamp(15px, 1.5vw, 18px); margin-bottom: 35px; line-height: 1.6; font-family: 'Inter', sans-serif;">Join the movement. Get the latest insights on wealth building and investments sent straight to your inbox.</p>
             <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Subscribed to Newsletter!');" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
-                <input type="email" class="subscribe-input" placeholder="Enter your email" required style="flex: 1 1 280px; padding: 16px 24px; border-radius: 50px; border: 1px solid #D1D5DB; font-size: 16px; font-family: 'Inter', sans-serif; outline: none; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);">
+                <input type="email" class="subscribe-input" placeholder="Enter your email" required>
                 <button type="submit" style="background-color: #A03FA3; color: #FFFFFF; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 16px 40px; border-radius: 50px; border: none; font-size: 14px; cursor: pointer; transition: background 0.2s, transform 0.2s; box-shadow: 0 4px 15px rgba(160,63,163,0.3);">Subscribe</button>
             </form>
         </div>

@@ -207,13 +207,31 @@
             /* Better unified mobile framing for cards (no harsh cropping) */
             .partner-card, .pillar-card, .manifesto-card, .diff-card { aspect-ratio: 4/5 !important; }
             .partner-card img, .pillar-card img, .manifesto-card img, .diff-card img { object-position: center 30%; }
+
+            /* Standardized lateral padding for mobile */
+            .container, section > div { 
+                padding-left: 20px !important; 
+                padding-right: 20px !important; 
+            }
+            
+            /* Full-width standardized CTA buttons for mobile */
+            .btn, .btn-large, a[style*="A03FA3"], button[style*="A03FA3"] {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                text-align: center !important;
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
         }
 
         /* Typography anti-widow engine */
         h1, h2, h3, h4 { text-wrap: balance; }
         p, li, span, a { text-wrap: pretty; }
 
-        .container { width: 100%; max-width: 1500px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 60px); }
+        .container { width: 100%; max-width: 1500px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 60px); }
         .content-section { padding: 100px 0; }
         
         .image-placeholder {

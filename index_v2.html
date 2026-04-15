@@ -226,6 +226,13 @@
                 padding-left: 10px !important;
                 padding-right: 10px !important;
             }
+            
+            /* What Makes Us Different Mobile Overrides */
+            .diff-content-container { text-align: center !important; align-items: center !important; justify-content: center !important; }
+            .diff-content-container p, .diff-content-container h2 { margin-left: auto; margin-right: auto; text-align: center !important; }
+            .diff-pills { width: 100%; justify-content: flex-start !important; padding-bottom: 5px; }
+            .diff-pills span { flex-shrink: 0; }
+            .diff-btn-wrapper { width: 100%; display: flex; }
         }
 
         /* Typography anti-widow engine */
@@ -651,23 +658,23 @@
             </div>
 
             <!-- Right Side Content -->
-            <div class="mobile-text-center" style="flex: 1 1 100%; max-width: 100%; text-align: left; display: flex; flex-direction: column; justify-content: center; overflow: hidden;">
+            <div class="diff-content-container" style="flex: 1 1 400px; text-align: left; display: flex; flex-direction: column; justify-content: center;">
                 <h2 style="font-size: clamp(36px, 4.5vw, 64px); font-weight: 900; color: #111111; line-height: 1.1; margin-bottom: 25px; letter-spacing: -2px;">
                     What Makes Us<br>Different?
                 </h2>
-                <p style="font-size: clamp(16px, 1.8vw, 22px); color: #4B5563; line-height: 1.5; margin-bottom: 35px; font-weight: 400; width: 100%;">
+                <p style="font-size: clamp(16px, 1.8vw, 22px); color: #4B5563; line-height: 1.5; margin-bottom: 35px; font-weight: 400;">
                     Most programs teach what to do with money. We transform how women think about money. Castle is a scalable, measurable transformation model designed specifically for the unique ways women build wealth.
                 </p>
                 
-                <div style="display: flex; gap: clamp(6px, 1vw, 10px); margin-bottom: 50px; flex-wrap: nowrap; white-space: nowrap; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; width: 100%; justify-content: flex-start; padding-bottom: 5px;">
-                    <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px; flex-shrink: 0;">PSYCHOLOGY</span>
-                    <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px; flex-shrink: 0;">FINANCE</span>
-                    <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px; flex-shrink: 0;">TECHNOLOGY</span>
-                    <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px; flex-shrink: 0;">COMMUNITY</span>
+                <div class="diff-pills" style="display: flex; gap: clamp(6px, 1vw, 10px); margin-bottom: 50px; flex-wrap: nowrap; white-space: nowrap; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;">
+                    <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px;">PSYCHOLOGY</span>
+                    <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px;">FINANCE</span>
+                    <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px;">TECHNOLOGY</span>
+                    <span style="font-size: clamp(10px, 1vw, 12px); font-weight: 700; color: #111111; background: #F3F4F6; padding: 9px 16px; border-radius: 50px; letter-spacing: 0.5px;">COMMUNITY</span>
                 </div>
 
-                <div style="width: 100%; display: flex;">
-                    <a href="#waitlist" class="btn" style="background-color: #A03FA3; color: #FFFFFF; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; padding: clamp(16px, 1.5vw, 22px) clamp(30px, 3vw, 50px); border-radius: 50px; font-size: clamp(13px, 1.2vw, 15px); text-decoration: none; display: block; box-shadow: 0 10px 30px rgba(160, 63, 163, 0.3); width: 100%;">
+                <div class="diff-btn-wrapper">
+                    <a href="#waitlist" class="btn" style="background-color: #A03FA3; color: #FFFFFF; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; padding: clamp(16px, 1.5vw, 22px) clamp(30px, 3vw, 50px); border-radius: 50px; font-size: clamp(13px, 1.2vw, 15px); text-decoration: none; display: inline-block; box-shadow: 0 10px 30px rgba(160, 63, 163, 0.3);">
                         JOIN THE CHALLENGE
                     </a>
                 </div>
